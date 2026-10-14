@@ -33,6 +33,19 @@ def test_complete_diagnostic_workflow() -> None:
 
         assert form._current_question is not None
         assert form._current_question["id"] == "insect_appearance"
+        
+        
+        # Verify that the tree state is displayed after answering.
+        assert form._tree_status_label.cget("text") == (
+            "Ruta del árbol completada "
+            "(resultado preliminar). "
+            "Continuaremos recopilando información."
+        )
+
+        # Reaching a demo leaf must not end the questionnaire early.
+        assert form._current_question is not None
+        assert form._current_question["id"] == "insect_appearance"
+
 
         # Answer the question about insect appearance.
         form._radio_variable.set("chewing_insects")

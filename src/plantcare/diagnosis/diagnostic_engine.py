@@ -5,6 +5,7 @@ from plantcare.diagnosis.condition_mapper import ConditionMapper
 from plantcare.diagnosis.diagnostic_context import DiagnosticContext
 from plantcare.tree.binary_tree import BinaryDecisionTree
 from plantcare.tree.node import DiagnosisNode
+from plantcare.tree.traversal_state import TraversalState
 
 
 class DiagnosticEngine:
@@ -16,7 +17,7 @@ class DiagnosticEngine:
         condition_mapper: ConditionMapper,
     ) -> None:
         """Initialize the diagnostic engine dependencies."""
-        # Keep the tree traversal separate from condition mapping.
+        # Keep tree traversal separate from condition mapping.
         self._decision_tree = decision_tree
         self._condition_mapper = condition_mapper
 
@@ -24,18 +25,20 @@ class DiagnosticEngine:
         self,
         context: DiagnosticContext,
     ) -> DiagnosisNode:
-        """Evaluate recorded answers and return a diagnostic leaf.
-
-        Raises:
-            ValueError: If required answers are missing or invalid.
-            TypeError: If a tree condition is not Boolean.
-        """
-        # Convert selected symptom IDs into binary conditions.
+        """Evaluate recorded answers and return a diagnostic leaf."""
+        # Convert selected symptoms into binary conditions.
         conditions = self._condition_mapper.build_conditions(context)
 
-        # Evaluate the conditions using the loaded binary tree.
-        # Missing conditions are never assumed to be False.
-        diagnosis = self._decision_tree.traverse(conditions)
+        # Require a complete path through the binary tree.
+        return self._decision_tree.traverse(conditions)
 
-        # Return the leaf containing candidate problem codes.
-        return diagnosis
+    def evaluate_partial(
+        self,
+        context: DiagnosticContext,
+    ) -> TraversalState:
+        """Return the current diagnostic traversal state."""
+        # Convert only answered questions into binary conditions.
+        conditions = self._condition_mapper.build_conditions(context)
+
+        # Preserve pending conditions instead of raising missing-answer errors.
+        return self._decision_tree.traverse_partial(conditions)

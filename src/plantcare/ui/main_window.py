@@ -108,6 +108,7 @@ class PlantCareApp(tk.Tk):
             parent=self._container,
             questionnaire=questionnaire,
             on_complete=self._show_summary,
+            on_progress=diagnostic_engine.evaluate_partial,
         )
         form.pack(fill="both", expand=True)
 
