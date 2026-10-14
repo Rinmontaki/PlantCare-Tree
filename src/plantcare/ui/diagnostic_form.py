@@ -1,0 +1,179 @@
+
+"""Dynamic diagnostic questionnaire interface for PlantCare."""
+
+import tkinter as tk
+from collections.abc import Callable
+from tkinter import messagebox, ttk
+from typing import Any
+
+from plantcare.diagnosis.diagnostic_context import DiagnosticContext
+from plantcare.diagnosis.questionnaire_navigator import (
+    QuestionnaireNavigator,
+)
+
+
+class DiagnosticForm(ttk.Frame):
+    """Display and manage dynamic plant diagnostic questions."""
+
+    def __init__(
+        self,
+        parent: tk.Misc,
+        questionnaire: dict[str, Any],
+        on_complete: Callable[[DiagnosticContext], None],
+    ) -> None:
+        """Initialize the diagnostic questionnaire interface."""
+        super().__init__(parent, padding=24)
+
+        # Initialize the diagnostic session and its navigation logic.
+        self._context = DiagnosticContext()
+        self._navigator = QuestionnaireNavigator(questionnaire)
+        self._on_complete = on_complete
+
+        self._max_questions = questionnaire["max_questions"]
+        self._current_question: dict[str, Any] | None = None
+
+        # Store the state of the currently displayed options.
+        self._checkbox_variables: dict[str, tk.BooleanVar] = {}
+        self._radio_variable = tk.StringVar(value="")
+
+        self._build_layout()
+        self._show_next_question()
+
+    def _build_layout(self) -> None:
+        """Create the questionnaire's reusable visual components."""
+
+        # Display the current progress through the questionnaire.
+        self._progress_label = ttk.Label(
+            self,
+            font=("Segoe UI", 11),
+        )
+        self._progress_label.pack(
+            anchor="w",
+            pady=(0, 12),
+        )
+
+        # Display the text of the current diagnostic question.
+        self._question_label = ttk.Label(
+            self,
+            font=("Segoe UI", 16, "bold"),
+            wraplength=650,
+        )
+        self._question_label.pack(
+            anchor="w",
+            pady=(0, 16),
+        )
+
+        # Reserve a container for dynamically created answer controls.
+        self._options_frame = ttk.Frame(self)
+        self._options_frame.pack(
+            fill="x",
+            pady=(0, 20),
+        )
+
+        # Advance to the next applicable question.
+        self._next_button = ttk.Button(
+            self,
+            text="Guardar y continuar",
+            command=self._save_and_continue,
+        )
+        self._next_button.pack(anchor="e")
+
+    def _show_next_question(self) -> None:
+        """Display the next applicable unanswered question."""
+        question = self._navigator.get_next_question(self._context)
+
+        # Finish when no additional questions are applicable.
+        if question is None:
+            self._current_question = None
+            self._on_complete(self._context)
+            return
+
+        self._current_question = question
+        self._render_question(question)
+
+    def _render_question(self, question: dict[str, Any]) -> None:
+        """Render the answer controls for the selected question."""
+
+        # Remove controls belonging to the previous question.
+        for widget in self._options_frame.winfo_children():
+            widget.destroy()
+
+        self._checkbox_variables.clear()
+        self._radio_variable.set("")
+
+        question_number = self._context.question_count + 1
+
+        self._progress_label.configure(
+            text=(
+                f"Pregunta {question_number} "
+                f"de hasta {self._max_questions}"
+            )
+        )
+
+        self._question_label.configure(text=question["text"])
+
+        selection_mode = question["selection_mode"]
+
+        # Create controls according to the configured selection mode.
+        for option in question["options"]:
+            option_id = option["id"]
+            option_label = option["label"]
+
+            if selection_mode == "multiple":
+                variable = tk.BooleanVar(value=False)
+                self._checkbox_variables[option_id] = variable
+
+                control = ttk.Checkbutton(
+                    self._options_frame,
+                    text=option_label,
+                    variable=variable,
+                )
+            else:
+                control = ttk.Radiobutton(
+                    self._options_frame,
+                    text=option_label,
+                    variable=self._radio_variable,
+                    value=option_id,
+                )
+
+            control.pack(anchor="w", pady=6)
+
+    def _get_selected_options(self) -> tuple[str, ...]:
+        """Collect the option identifiers selected by the user."""
+        if self._current_question is None:
+            return ()
+
+        if self._current_question["selection_mode"] == "multiple":
+            return tuple(
+                option_id
+                for option_id, variable in self._checkbox_variables.items()
+                if variable.get()
+            )
+
+        selected_option = self._radio_variable.get()
+
+        return (selected_option,) if selected_option else ()
+
+    def _save_and_continue(self) -> None:
+        """Validate the current answer and advance the questionnaire."""
+        if self._current_question is None:
+            return
+
+        selected_options = self._get_selected_options()
+
+        # Prevent the user from submitting an unanswered question.
+        if not selected_options:
+            messagebox.showwarning(
+                "Respuesta requerida",
+                "Selecciona al menos una opción para continuar.",
+            )
+            return
+
+        # Store the selected options in the diagnostic context.
+        self._context.record_answer(
+            question_id=self._current_question["id"],
+            selected_option_ids=selected_options,
+        )
+
+        # Let the navigator select the next relevant question.
+        self._show_next_question()
