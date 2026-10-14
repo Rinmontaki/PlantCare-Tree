@@ -6,6 +6,12 @@ from plantcare.diagnosis.diagnostic_context import DiagnosticContext
 from plantcare.tree.binary_tree import BinaryDecisionTree
 from plantcare.tree.node import DiagnosisNode
 from plantcare.tree.traversal_state import TraversalState
+from plantcare.diagnosis.diagnostic_completion_policy import (
+    DiagnosticCompletionPolicy,
+)
+from plantcare.diagnosis.diagnostic_completion_state import (
+    DiagnosticCompletionState,
+)
 
 
 class DiagnosticEngine:
@@ -42,3 +48,20 @@ class DiagnosticEngine:
 
         # Preserve pending conditions instead of raising missing-answer errors.
         return self._decision_tree.traverse_partial(conditions)
+    
+    
+    def evaluate_completion(
+        self,
+        context: DiagnosticContext,
+        completion_policy: DiagnosticCompletionPolicy,
+    ) -> DiagnosticCompletionState:
+        """Evaluate whether a diagnostic session can finish."""
+        # Obtain the current state of the binary tree traversal.
+        traversal_state = self.evaluate_partial(context)
+
+        # Apply the completion rules independently of tree traversal.
+        return completion_policy.evaluate(
+            context=context,
+            traversal_state=traversal_state,
+        )
+

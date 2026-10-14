@@ -10,7 +10,9 @@ from plantcare.diagnosis.diagnostic_context import DiagnosticContext
 from plantcare.diagnosis.questionnaire_navigator import (
     QuestionnaireNavigator,
 )
-from plantcare.tree.traversal_state import TraversalState
+from plantcare.diagnosis.diagnostic_completion_state import (
+    DiagnosticCompletionState,
+)
 
 
 class DiagnosticForm(ttk.Frame):
@@ -22,7 +24,7 @@ class DiagnosticForm(ttk.Frame):
         questionnaire: dict[str, Any],
         on_complete: Callable[[DiagnosticContext], None],
         on_progress: (
-            Callable[[DiagnosticContext], TraversalState] | None
+        Callable[[DiagnosticContext], DiagnosticCompletionState] | None
         ) = None,
     ) -> None:
         """Initialize the diagnostic questionnaire interface."""
@@ -173,26 +175,47 @@ class DiagnosticForm(ttk.Frame):
 
         return (selected_option,) if selected_option else ()
 
+    
     def _update_traversal_status(self) -> bool:
-        """Evaluate and display the current tree traversal state."""
+        """Evaluate and display diagnostic completion progress."""
         if self._on_progress is None:
             return True
 
         try:
-            state = self._on_progress(self._context)
+            completion_state = self._on_progress(self._context)
+
         except (ValueError, TypeError) as error:
             messagebox.showerror(
                 "Error de evaluación",
-                f"No se pudo evaluar el árbol:\n{error}",
+                f"No se pudo evaluar el diagnóstico:\n{error}",
             )
             return False
 
-        if state.is_complete:
+        # Check whether the session satisfies all completion rules.
+        if completion_state.is_ready_to_finish:
             status_text = (
-                "Ruta del árbol completada "
-                "(resultado preliminar). "
-                "Continuaremos recopilando información."
+                "Información requerida completa. "
+                "El cuestionario está listo para finalizar."
             )
+
+        # A completed tree path may still require more observations.
+        elif completion_state.traversal_state.is_complete:
+            pending_count = len(
+                completion_state.pending_required_questions
+            )
+
+            question_label = (
+                "pregunta obligatoria"
+                if pending_count == 1
+                else "preguntas obligatorias"
+            )
+
+            status_text = (
+                "Ruta del árbol completada (resultado preliminar). "
+                f"Faltan {pending_count} {question_label}."
+            )
+
+        # The tree cannot reach a leaf with the available answers.
         else:
             status_text = (
                 "Ruta del árbol pendiente: "
@@ -202,7 +225,9 @@ class DiagnosticForm(ttk.Frame):
         self._tree_status_label.configure(
             text=status_text
         )
+
         return True
+
 
     def _save_and_continue(self) -> None:
         """Save the current answer and continue the questionnaire."""

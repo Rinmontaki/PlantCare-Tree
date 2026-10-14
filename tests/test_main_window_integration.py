@@ -35,12 +35,12 @@ def test_complete_diagnostic_workflow() -> None:
         assert form._current_question["id"] == "insect_appearance"
         
         
-        # Verify that the tree state is displayed after answering.
+        # Verify that the completion policy identifies pending questions.
         assert form._tree_status_label.cget("text") == (
-            "Ruta del árbol completada "
-            "(resultado preliminar). "
-            "Continuaremos recopilando información."
+            "Ruta del árbol completada (resultado preliminar). "
+            "Faltan 3 preguntas obligatorias."
         )
+
 
         # Reaching a demo leaf must not end the questionnaire early.
         assert form._current_question is not None

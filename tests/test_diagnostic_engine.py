@@ -12,6 +12,9 @@ from plantcare.diagnosis.questionnaire_loader import load_questionnaire
 from plantcare.tree.binary_tree import BinaryDecisionTree
 from plantcare.tree.tree_loader import load_tree
 from plantcare.tree.node import DecisionNode, DiagnosisNode
+from plantcare.diagnosis.diagnostic_completion_policy import (
+    DiagnosticCompletionPolicy,
+)
 
 # Locate configuration files relative to the project root.
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -299,4 +302,120 @@ def test_partial_engine_preserves_recorded_answers(
 
     assert context.get_answers() == original_answers
     assert context.question_count == 1
+    
+    
+def test_engine_completion_requires_initial_answers(
+    diagnostic_engine: DiagnosticEngine,
+) -> None:
+    """Prevent completion when the diagnostic context is empty."""
+    questionnaire = load_questionnaire(QUESTIONNAIRE_PATH)
+    completion_policy = DiagnosticCompletionPolicy(questionnaire)
+    context = DiagnosticContext()
+
+    state = diagnostic_engine.evaluate_completion(
+        context,
+        completion_policy,
+    )
+
+    assert state.is_ready_to_finish is False
+    assert state.traversal_state.is_complete is False
+    assert state.traversal_state.pending_condition_key == "visible_insects"
+    assert state.pending_required_questions == (
+        "leaf_symptoms",
+        "soil_condition",
+    )
+
+
+def test_engine_completion_requires_follow_up_questions(
+    diagnostic_engine: DiagnosticEngine,
+) -> None:
+    """Keep collecting relevant answers after reaching a tree leaf."""
+    questionnaire = load_questionnaire(QUESTIONNAIRE_PATH)
+    completion_policy = DiagnosticCompletionPolicy(questionnaire)
+    context = DiagnosticContext()
+
+    context.record_answer(
+        "leaf_symptoms",
+        ("visible_insects", "leaf_holes"),
+    )
+
+    state = diagnostic_engine.evaluate_completion(
+        context,
+        completion_policy,
+    )
+
+    assert state.traversal_state.is_complete is True
+    assert state.is_ready_to_finish is False
+    assert state.pending_required_questions == (
+        "insect_appearance",
+        "leaf_damage",
+        "soil_condition",
+    )
+
+
+def test_engine_completion_allows_finished_questionnaire(
+    diagnostic_engine: DiagnosticEngine,
+) -> None:
+    """Allow completion after all applicable questions are answered."""
+    questionnaire = load_questionnaire(QUESTIONNAIRE_PATH)
+    completion_policy = DiagnosticCompletionPolicy(questionnaire)
+    context = DiagnosticContext()
+
+    context.record_answer(
+        "leaf_symptoms",
+        ("visible_insects", "leaf_holes"),
+    )
+    context.record_answer(
+        "insect_appearance",
+        ("chewing_insects",),
+    )
+    context.record_answer(
+        "leaf_damage",
+        ("irregular_holes",),
+    )
+    context.record_answer(
+        "soil_condition",
+        ("normal_soil",),
+    )
+
+    state = diagnostic_engine.evaluate_completion(
+        context,
+        completion_policy,
+    )
+
+    assert state.is_ready_to_finish is True
+    assert state.pending_required_questions == ()
+    assert state.traversal_state.diagnosis is not None
+    assert state.traversal_state.diagnosis.node_id == "diagnosis_001"
+    assert context.question_count == 4
+
+
+def test_engine_completion_skips_hidden_questions(
+    diagnostic_engine: DiagnosticEngine,
+) -> None:
+    """Complete a session without requiring irrelevant questions."""
+    questionnaire = load_questionnaire(QUESTIONNAIRE_PATH)
+    completion_policy = DiagnosticCompletionPolicy(questionnaire)
+    context = DiagnosticContext()
+
+    context.record_answer(
+        "leaf_symptoms",
+        ("yellowing",),
+    )
+    context.record_answer(
+        "soil_condition",
+        ("normal_soil",),
+    )
+
+    state = diagnostic_engine.evaluate_completion(
+        context,
+        completion_policy,
+    )
+
+    assert state.is_ready_to_finish is True
+    assert state.pending_required_questions == ()
+    assert state.traversal_state.diagnosis is not None
+    assert state.traversal_state.diagnosis.node_id == "diagnosis_003"
+    assert context.question_count == 2
+
 

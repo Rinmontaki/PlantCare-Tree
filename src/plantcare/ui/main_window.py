@@ -5,6 +5,7 @@ import tkinter as tk
 from pathlib import Path
 from tkinter import messagebox, ttk
 from typing import Any
+from functools import partial
 
 from plantcare.diagnosis.diagnostic_context import DiagnosticContext
 from plantcare.diagnosis.diagnostic_engine import DiagnosticEngine
@@ -14,6 +15,9 @@ from plantcare.diagnosis.diagnostic_engine_factory import (
 from plantcare.diagnosis.questionnaire_loader import load_questionnaire
 from plantcare.tree.tree_loader import load_tree
 from plantcare.ui.diagnostic_form import DiagnosticForm
+from plantcare.diagnosis.diagnostic_completion_policy import (
+    DiagnosticCompletionPolicy,
+)
 
 
 # Define configuration paths relative to the project directory.
@@ -89,6 +93,10 @@ class PlantCareApp(tk.Tk):
                 questionnaire=questionnaire,
                 root=root,
             )
+            # Create the completion policy for this diagnostic session.
+            completion_policy = DiagnosticCompletionPolicy(
+            questionnaire=questionnaire,
+            )
 
         except (OSError, ValueError, TypeError, KeyError) as error:
             messagebox.showerror(
@@ -108,7 +116,10 @@ class PlantCareApp(tk.Tk):
             parent=self._container,
             questionnaire=questionnaire,
             on_complete=self._show_summary,
-            on_progress=diagnostic_engine.evaluate_partial,
+            on_progress=partial(
+                diagnostic_engine.evaluate_completion,
+                completion_policy=completion_policy,
+            ),
         )
         form.pack(fill="both", expand=True)
 
