@@ -144,3 +144,57 @@ def test_get_answers_returns_copy() -> None:
     assert context.get_answers()["leaf_symptoms"] == (
         "yellowing",
     )
+    
+    
+def test_remove_existing_answer() -> None:
+    """Remove an existing diagnostic answer."""
+    context = DiagnosticContext()
+
+    context.record_answer(
+        "leaf_symptoms",
+        ("yellowing", "visible_insects"),
+    )
+
+    context.remove_answer("leaf_symptoms")
+
+    assert context.question_count == 0
+    assert "leaf_symptoms" not in context.get_answers()
+
+
+def test_remove_answer_preserves_other_answers() -> None:
+    """Preserve unrelated answers when removing one question."""
+    context = DiagnosticContext()
+
+    context.record_answer(
+        "leaf_symptoms",
+        ("visible_insects",),
+    )
+    context.record_answer(
+        "soil_condition",
+        ("normal_soil",),
+    )
+
+    context.remove_answer("leaf_symptoms")
+
+    assert context.question_count == 1
+    assert context.get_answers() == {
+        "soil_condition": ("normal_soil",),
+    }
+
+
+def test_remove_nonexistent_answer() -> None:
+    """Ignore attempts to remove an unanswered question."""
+    context = DiagnosticContext()
+
+    context.record_answer(
+        "leaf_symptoms",
+        ("yellowing",),
+    )
+
+    context.remove_answer("unknown_question")
+
+    assert context.question_count == 1
+    assert context.get_answers()["leaf_symptoms"] == (
+        "yellowing",
+    )
+

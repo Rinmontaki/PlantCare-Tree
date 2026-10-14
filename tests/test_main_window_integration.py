@@ -47,8 +47,8 @@ def test_complete_diagnostic_workflow() -> None:
         assert form._current_question["id"] == "insect_appearance"
 
 
-        # Answer the question about insect appearance.
-        form._radio_variable.set("chewing_insects")
+        # Answer the multiple-choice insect appearance question.    
+        form._checkbox_variables["chewing_insects"].set(True)
         form._save_and_continue()
 
         assert form._current_question is not None

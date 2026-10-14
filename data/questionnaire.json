@@ -33,7 +33,7 @@
     {
       "id": "insect_appearance",
       "text": "¿Qué características tienen los insectos?",
-      "selection_mode": "single",
+      "selection_mode": "multiple",
       "show_if": {
         "selected_option": "visible_insects"
       },

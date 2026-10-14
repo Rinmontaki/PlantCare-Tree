@@ -54,6 +54,11 @@ class DiagnosticContext:
 
         # Store immutable selections to preserve response consistency.
         self._answers[question_id] = selections
+        
+    
+    def remove_answer(self, question_id: str) -> None:
+        """Remove a previously recorded diagnostic answer."""
+        self._answers.pop(question_id, None)
 
     @property
     def question_count(self) -> int:
