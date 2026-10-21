@@ -1,0 +1,275 @@
+{
+  "max_questions": 10,
+  "questions": [
+    {
+      "id": "agua_raices",
+      "text": "¿Qué señales de riego, drenaje o maceta observas?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_001",
+          "label": "Hojas amarillas o caídas con tierra persistentemente mojada"
+        },
+        {
+          "id": "sign_002",
+          "label": "Tierra muy seca, hojas caídas y bordes crujientes"
+        },
+        {
+          "id": "sign_003",
+          "label": "Agua acumulada, drenaje lento o raíces sin aireación"
+        },
+        {
+          "id": "sign_004",
+          "label": "Tierra muy compacta que absorbe mal el agua"
+        },
+        {
+          "id": "sign_005",
+          "label": "Raíces enrolladas y crecimiento detenido"
+        }
+      ]
+    },
+    {
+      "id": "ambiente_luz",
+      "text": "¿Qué señales del ambiente y la luz observas?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_006",
+          "label": "Puntas secas o marrones por aire seco"
+        },
+        {
+          "id": "sign_007",
+          "label": "Condensación, follaje mojado persistente o moho superficial"
+        },
+        {
+          "id": "sign_008",
+          "label": "Tallos muy largos y hojas pálidas por poca luz"
+        },
+        {
+          "id": "sign_009",
+          "label": "Parches blanquecinos o marrones tras sol directo"
+        },
+        {
+          "id": "sign_010",
+          "label": "Tejidos negros o blandos tras bajas temperaturas"
+        }
+      ]
+    },
+    {
+      "id": "temperatura_nutricion",
+      "text": "¿Qué señales de calor o nutrición observas?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_011",
+          "label": "Marchitez y bordes secos coincidiendo con calor intenso"
+        },
+        {
+          "id": "sign_012",
+          "label": "Costra de sales o puntas quemadas tras fertilizar"
+        },
+        {
+          "id": "sign_013",
+          "label": "Amarillamiento general de hojas antiguas y bajo vigor"
+        },
+        {
+          "id": "sign_014",
+          "label": "Crecimiento lento con tonos púrpura en hojas"
+        },
+        {
+          "id": "sign_015",
+          "label": "Bordes secos/necróticos en hojas maduras"
+        }
+      ]
+    },
+    {
+      "id": "nutrientes_ph",
+      "text": "¿Qué patrón de clorosis o brotes nuevos observas?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_016",
+          "label": "Amarillo entre nervaduras de hojas maduras"
+        },
+        {
+          "id": "sign_017",
+          "label": "Hojas nuevas amarillas, con nervaduras verdes"
+        },
+        {
+          "id": "sign_018",
+          "label": "Brotes nuevos deformados o necrosis apical en frutos"
+        },
+        {
+          "id": "sign_019",
+          "label": "Amarillamiento de brotes jóvenes y crecimiento limitado"
+        },
+        {
+          "id": "sign_020",
+          "label": "Clorosis pese al abonado con sospecha de pH inadecuado"
+        }
+      ]
+    },
+    {
+      "id": "hongos_hojas",
+      "text": "¿Qué signos de manchas o mohos observas?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_021",
+          "label": "Polvo blanco sobre hojas o tallos"
+        },
+        {
+          "id": "sign_022",
+          "label": "Manchas amarillas angulares y vello bajo la hoja"
+        },
+        {
+          "id": "sign_023",
+          "label": "Pústulas anaranjadas o marrones sobre hojas"
+        },
+        {
+          "id": "sign_024",
+          "label": "Manchas redondas o irregulares que progresan con humedad"
+        },
+        {
+          "id": "sign_025",
+          "label": "Vello gris sobre flores/hojas deterioradas"
+        }
+      ]
+    },
+    {
+      "id": "enfermedad_raices",
+      "text": "¿Qué signos de enfermedad más profunda observas?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_026",
+          "label": "Lesiones hundidas en frutos, tallos u hojas"
+        },
+        {
+          "id": "sign_027",
+          "label": "Manchas oscuras con anillos concéntricos"
+        },
+        {
+          "id": "sign_028",
+          "label": "Raíces blandas, oscuras y decaimiento general"
+        },
+        {
+          "id": "sign_029",
+          "label": "Plántulas dobladas con cuello acuoso/estrecho"
+        },
+        {
+          "id": "sign_030",
+          "label": "Moteado irregular persistente y deformaciones"
+        }
+      ]
+    },
+    {
+      "id": "plagas_comunes",
+      "text": "¿Qué plagas o rastros encuentras en la parte aérea?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_031",
+          "label": "Orugas y excrementos con hojas perforadas"
+        },
+        {
+          "id": "sign_032",
+          "label": "Colonias en brotes tiernos y melaza pegajosa"
+        },
+        {
+          "id": "sign_033",
+          "label": "Pequeñas moscas blancas que salen volando"
+        },
+        {
+          "id": "sign_034",
+          "label": "Masas blancas algodonosas en tallos y hojas"
+        },
+        {
+          "id": "sign_035",
+          "label": "Cubiertas duras o escamas inmóviles adheridas"
+        }
+      ]
+    },
+    {
+      "id": "plagas_hojas_suelo",
+      "text": "¿Qué daño o animal pequeño observas?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_036",
+          "label": "Rayas plateadas y puntos negros con insectos delgados"
+        },
+        {
+          "id": "sign_037",
+          "label": "Telarañas finas y punteado pálido de hojas"
+        },
+        {
+          "id": "sign_038",
+          "label": "Galerías claras sinuosas dentro de hojas"
+        },
+        {
+          "id": "sign_039",
+          "label": "Agujeros y rastros de baba sin conchas"
+        },
+        {
+          "id": "sign_040",
+          "label": "Agujeros y rastros de baba con caracoles"
+        }
+      ]
+    },
+    {
+      "id": "otros_insectos",
+      "text": "¿Qué tipo de insecto o daño específico reconoces?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_041",
+          "label": "Mosquitas oscuras cerca del sustrato húmedo"
+        },
+        {
+          "id": "sign_042",
+          "label": "Larvas, picaduras o ablandamiento en frutos"
+        },
+        {
+          "id": "sign_043",
+          "label": "Escarabajos duros que hacen agujeros en hojas"
+        },
+        {
+          "id": "sign_044",
+          "label": "Muescas semicirculares en bordes de hojas"
+        },
+        {
+          "id": "sign_045",
+          "label": "Chinches perforadoras y frutos deformados"
+        }
+      ]
+    },
+    {
+      "id": "plagas_raices_tallos",
+      "text": "¿Qué evidencias ves en ramas, raíces o brotes?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "sign_046",
+          "label": "Orificios y serrín fino en tallos o ramas"
+        },
+        {
+          "id": "sign_047",
+          "label": "Agallas o nudos anormales en raíces"
+        },
+        {
+          "id": "sign_048",
+          "label": "Insectos saltadores con melaza y brotes deformados"
+        },
+        {
+          "id": "sign_049",
+          "label": "Insectos pequeños que saltan y hojas punteadas"
+        },
+        {
+          "id": "sign_050",
+          "label": "Masas blancas cerosas entre las raíces"
+        }
+      ]
+    }
+  ]
+}

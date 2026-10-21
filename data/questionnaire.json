@@ -1,0 +1,113 @@
+
+{
+  "version": 1,
+  "max_questions": 10,
+  "questions": [
+    {
+      "id": "leaf_symptoms",
+      "text": "¿Qué síntomas observas en tu planta?",
+      "selection_mode": "multiple",
+      "options": [
+        {
+          "id": "yellowing",
+          "label": "Amarillamiento de hojas"
+        },
+        {
+          "id": "leaf_holes",
+          "label": "Agujeros o mordeduras"
+        },
+        {
+          "id": "visible_insects",
+          "label": "Insectos visibles"
+        },
+        {
+          "id": "wilting",
+          "label": "Marchitez o caída de hojas"
+        },
+        {
+          "id": "dark_spots",
+          "label": "Manchas oscuras"
+        }
+      ]
+    },
+    {
+      "id": "insect_appearance",
+      "text": "¿Qué características tienen los insectos?",
+      "selection_mode": "multiple",
+      "show_if": {
+        "selected_option": "visible_insects"
+      },
+      "options": [
+        {
+          "id": "clustered_insects",
+          "label": "Pequeños insectos agrupados"
+        },
+        {
+          "id": "cotton_like_insects",
+          "label": "Masas blancas parecidas a algodón"
+        },
+        {
+          "id": "flying_insects",
+          "label": "Insectos pequeños que vuelan"
+        },
+        {
+          "id": "chewing_insects",
+          "label": "Orugas o insectos que comen hojas"
+        },
+        {
+          "id": "unknown_insects",
+          "label": "No puedo identificarlos"
+        }
+      ]
+    },
+    {
+      "id": "leaf_damage",
+      "text": "¿Cómo son los daños que observas en las hojas?",
+      "selection_mode": "multiple",
+      "show_if": {
+        "selected_option": "leaf_holes"
+      },
+      "options": [
+        {
+          "id": "irregular_holes",
+          "label": "Agujeros irregulares"
+        },
+        {
+          "id": "small_holes",
+          "label": "Pequeñas perforaciones"
+        },
+        {
+          "id": "damaged_edges",
+          "label": "Bordes de hojas comidos"
+        },
+        {
+          "id": "damaged_new_leaves",
+          "label": "Hojas nuevas dañadas"
+        }
+      ]
+    },
+    {
+      "id": "soil_condition",
+      "text": "¿Cómo se encuentra la tierra o el sustrato?",
+      "selection_mode": "single",
+      "options": [
+        {
+          "id": "wet_soil",
+          "label": "Muy húmedo"
+        },
+        {
+          "id": "dry_soil",
+          "label": "Muy seco"
+        },
+        {
+          "id": "normal_soil",
+          "label": "Moderadamente húmedo"
+        },
+        {
+          "id": "unknown_soil",
+          "label": "No puedo determinarlo"
+        }
+      ]
+    }
+  ]
+}

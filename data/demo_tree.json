@@ -1,0 +1,26 @@
+
+{
+  "type": "decision",
+  "node_id": "decision_001",
+  "condition_key": "visible_insects",
+  "left": {
+    "type": "decision",
+    "node_id": "decision_002",
+    "condition_key": "leaf_holes",
+    "left": {
+      "type": "diagnosis",
+      "node_id": "diagnosis_001",
+      "problem_codes": ["PC-031"]
+    },
+    "right": {
+      "type": "diagnosis",
+      "node_id": "diagnosis_002",
+      "problem_codes": ["PC-032"]
+    }
+  },
+  "right": {
+    "type": "diagnosis",
+    "node_id": "diagnosis_003",
+    "problem_codes": ["PC-001"]
+  }
+}

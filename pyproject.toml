@@ -1,0 +1,23 @@
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plantcare-tree"
+version = "0.1.0"
+description = "Plant diagnosis system based on binary decision trees."
+requires-python = ">=3.11"
+dependencies = ["customtkinter>=5.2,<6", "Pillow>=10"]
+
+# Development tools are installed separately from runtime dependencies.
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+# Discover Python packages inside the src directory.
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Configure automated test discovery.
+[tool.pytest.ini_options]
+testpaths = ["tests"]

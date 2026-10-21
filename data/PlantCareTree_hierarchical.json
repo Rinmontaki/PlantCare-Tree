@@ -1,0 +1,595 @@
+{
+  "type": "decision",
+  "node_id": "decision_domain_abiotic",
+  "condition_key": "has_domain_abiotic",
+  "left": {
+    "type": "decision",
+    "node_id": "decision_abiotic_environment",
+    "condition_key": "has_abiotic_environment",
+    "left": {
+      "type": "decision",
+      "node_id": "decision_abiotic_water_roots",
+      "condition_key": "has_abiotic_water_roots",
+      "left": {
+        "type": "decision",
+        "node_id": "decision_water_roots_001_002_003_004_005",
+        "condition_key": "has_water_roots_001_002_003_004_005",
+        "left": {
+          "type": "decision",
+          "node_id": "decision_water_roots_001_002",
+          "condition_key": "has_water_roots_001_002",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_001",
+            "problem_codes": [
+              "PC-001"
+            ]
+          },
+          "right": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_002",
+            "problem_codes": [
+              "PC-002"
+            ]
+          }
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_water_roots_003_004_005",
+          "condition_key": "has_water_roots_003_004_005",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_003",
+            "problem_codes": [
+              "PC-003"
+            ]
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_water_roots_004_005",
+            "condition_key": "has_water_roots_004_005",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_004",
+              "problem_codes": [
+                "PC-004"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_005",
+              "problem_codes": [
+                "PC-005"
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "decision",
+        "node_id": "decision_light_environment_006_007_008_009_010",
+        "condition_key": "has_light_environment_006_007_008_009_010",
+        "left": {
+          "type": "decision",
+          "node_id": "decision_light_environment_006_007",
+          "condition_key": "has_light_environment_006_007",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_006",
+            "problem_codes": [
+              "PC-006"
+            ]
+          },
+          "right": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_007",
+            "problem_codes": [
+              "PC-007"
+            ]
+          }
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_light_environment_008_009_010",
+          "condition_key": "has_light_environment_008_009_010",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_008",
+            "problem_codes": [
+              "PC-008"
+            ]
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_light_environment_009_010",
+            "condition_key": "has_light_environment_009_010",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_009",
+              "problem_codes": [
+                "PC-009"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_010",
+              "problem_codes": [
+                "PC-010"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "type": "decision",
+      "node_id": "decision_abiotic_nutrition",
+      "condition_key": "has_abiotic_nutrition",
+      "left": {
+        "type": "decision",
+        "node_id": "decision_heat_nutrition_011_012_013_014_015",
+        "condition_key": "has_heat_nutrition_011_012_013_014_015",
+        "left": {
+          "type": "decision",
+          "node_id": "decision_heat_nutrition_011_012",
+          "condition_key": "has_heat_nutrition_011_012",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_011",
+            "problem_codes": [
+              "PC-011"
+            ]
+          },
+          "right": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_012",
+            "problem_codes": [
+              "PC-012"
+            ]
+          }
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_heat_nutrition_013_014_015",
+          "condition_key": "has_heat_nutrition_013_014_015",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_013",
+            "problem_codes": [
+              "PC-013"
+            ]
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_heat_nutrition_014_015",
+            "condition_key": "has_heat_nutrition_014_015",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_014",
+              "problem_codes": [
+                "PC-014"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_015",
+              "problem_codes": [
+                "PC-015"
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "decision",
+        "node_id": "decision_minerals_ph_016_017_018_019_020",
+        "condition_key": "has_minerals_ph_016_017_018_019_020",
+        "left": {
+          "type": "decision",
+          "node_id": "decision_minerals_ph_016_017",
+          "condition_key": "has_minerals_ph_016_017",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_016",
+            "problem_codes": [
+              "PC-016"
+            ]
+          },
+          "right": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_017",
+            "problem_codes": [
+              "PC-017"
+            ]
+          }
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_minerals_ph_018_019_020",
+          "condition_key": "has_minerals_ph_018_019_020",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_018",
+            "problem_codes": [
+              "PC-018"
+            ]
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_minerals_ph_019_020",
+            "condition_key": "has_minerals_ph_019_020",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_019",
+              "problem_codes": [
+                "PC-019"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_020",
+              "problem_codes": [
+                "PC-020"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "type": "decision",
+    "node_id": "decision_biotic_diseases",
+    "condition_key": "has_biotic_diseases",
+    "left": {
+      "type": "decision",
+      "node_id": "decision_diseases_foliar",
+      "condition_key": "has_diseases_foliar",
+      "left": {
+        "type": "decision",
+        "node_id": "decision_foliar_disease_021_022_023_024_025",
+        "condition_key": "has_foliar_disease_021_022_023_024_025",
+        "left": {
+          "type": "decision",
+          "node_id": "decision_foliar_disease_021_022",
+          "condition_key": "has_foliar_disease_021_022",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_021",
+            "problem_codes": [
+              "PC-021"
+            ]
+          },
+          "right": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_022",
+            "problem_codes": [
+              "PC-022"
+            ]
+          }
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_foliar_disease_023_024_025",
+          "condition_key": "has_foliar_disease_023_024_025",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_023",
+            "problem_codes": [
+              "PC-023"
+            ]
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_foliar_disease_024_025",
+            "condition_key": "has_foliar_disease_024_025",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_024",
+              "problem_codes": [
+                "PC-024"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_025",
+              "problem_codes": [
+                "PC-025"
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "decision",
+        "node_id": "decision_deep_disease_026_027_028_029_030",
+        "condition_key": "has_deep_disease_026_027_028_029_030",
+        "left": {
+          "type": "decision",
+          "node_id": "decision_deep_disease_026_027",
+          "condition_key": "has_deep_disease_026_027",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_026",
+            "problem_codes": [
+              "PC-026"
+            ]
+          },
+          "right": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_027",
+            "problem_codes": [
+              "PC-027"
+            ]
+          }
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_deep_disease_028_029_030",
+          "condition_key": "has_deep_disease_028_029_030",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_pc_028",
+            "problem_codes": [
+              "PC-028"
+            ]
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_deep_disease_029_030",
+            "condition_key": "has_deep_disease_029_030",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_029",
+              "problem_codes": [
+                "PC-029"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_030",
+              "problem_codes": [
+                "PC-030"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "type": "decision",
+      "node_id": "decision_pests_aerial_or_leaf",
+      "condition_key": "has_pests_aerial_or_leaf",
+      "left": {
+        "type": "decision",
+        "node_id": "decision_pests_aerial",
+        "condition_key": "has_pests_aerial",
+        "left": {
+          "type": "decision",
+          "node_id": "decision_aerial_pests_031_032_033_034_035",
+          "condition_key": "has_aerial_pests_031_032_033_034_035",
+          "left": {
+            "type": "decision",
+            "node_id": "decision_aerial_pests_031_032",
+            "condition_key": "has_aerial_pests_031_032",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_031",
+              "problem_codes": [
+                "PC-031"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_032",
+              "problem_codes": [
+                "PC-032"
+              ]
+            }
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_aerial_pests_033_034_035",
+            "condition_key": "has_aerial_pests_033_034_035",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_033",
+              "problem_codes": [
+                "PC-033"
+              ]
+            },
+            "right": {
+              "type": "decision",
+              "node_id": "decision_aerial_pests_034_035",
+              "condition_key": "has_aerial_pests_034_035",
+              "left": {
+                "type": "diagnosis",
+                "node_id": "leaf_pc_034",
+                "problem_codes": [
+                  "PC-034"
+                ]
+              },
+              "right": {
+                "type": "diagnosis",
+                "node_id": "leaf_pc_035",
+                "problem_codes": [
+                  "PC-035"
+                ]
+              }
+            }
+          }
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_leaf_soil_pests_036_037_038_039_040",
+          "condition_key": "has_leaf_soil_pests_036_037_038_039_040",
+          "left": {
+            "type": "decision",
+            "node_id": "decision_leaf_soil_pests_036_037",
+            "condition_key": "has_leaf_soil_pests_036_037",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_036",
+              "problem_codes": [
+                "PC-036"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_037",
+              "problem_codes": [
+                "PC-037"
+              ]
+            }
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_leaf_soil_pests_038_039_040",
+            "condition_key": "has_leaf_soil_pests_038_039_040",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_038",
+              "problem_codes": [
+                "PC-038"
+              ]
+            },
+            "right": {
+              "type": "decision",
+              "node_id": "decision_leaf_soil_pests_039_040",
+              "condition_key": "has_leaf_soil_pests_039_040",
+              "left": {
+                "type": "diagnosis",
+                "node_id": "leaf_pc_039",
+                "problem_codes": [
+                  "PC-039"
+                ]
+              },
+              "right": {
+                "type": "diagnosis",
+                "node_id": "leaf_pc_040",
+                "problem_codes": [
+                  "PC-040"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "decision",
+        "node_id": "decision_pests_special",
+        "condition_key": "has_pests_special",
+        "left": {
+          "type": "decision",
+          "node_id": "decision_special_pests_041_042_043_044_045",
+          "condition_key": "has_special_pests_041_042_043_044_045",
+          "left": {
+            "type": "decision",
+            "node_id": "decision_special_pests_041_042",
+            "condition_key": "has_special_pests_041_042",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_041",
+              "problem_codes": [
+                "PC-041"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_042",
+              "problem_codes": [
+                "PC-042"
+              ]
+            }
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_special_pests_043_044_045",
+            "condition_key": "has_special_pests_043_044_045",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_043",
+              "problem_codes": [
+                "PC-043"
+              ]
+            },
+            "right": {
+              "type": "decision",
+              "node_id": "decision_special_pests_044_045",
+              "condition_key": "has_special_pests_044_045",
+              "left": {
+                "type": "diagnosis",
+                "node_id": "leaf_pc_044",
+                "problem_codes": [
+                  "PC-044"
+                ]
+              },
+              "right": {
+                "type": "diagnosis",
+                "node_id": "leaf_pc_045",
+                "problem_codes": [
+                  "PC-045"
+                ]
+              }
+            }
+          }
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_stem_root_pests_046_047_048_049_050",
+          "condition_key": "has_stem_root_pests_046_047_048_049_050",
+          "left": {
+            "type": "decision",
+            "node_id": "decision_stem_root_pests_046_047",
+            "condition_key": "has_stem_root_pests_046_047",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_046",
+              "problem_codes": [
+                "PC-046"
+              ]
+            },
+            "right": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_047",
+              "problem_codes": [
+                "PC-047"
+              ]
+            }
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_stem_root_pests_048_049_050",
+            "condition_key": "has_stem_root_pests_048_049_050",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_pc_048",
+              "problem_codes": [
+                "PC-048"
+              ]
+            },
+            "right": {
+              "type": "decision",
+              "node_id": "decision_stem_root_pests_049_050",
+              "condition_key": "has_stem_root_pests_049_050",
+              "left": {
+                "type": "diagnosis",
+                "node_id": "leaf_pc_049",
+                "problem_codes": [
+                  "PC-049"
+                ]
+              },
+              "right": {
+                "type": "diagnosis",
+                "node_id": "leaf_pc_050",
+                "problem_codes": [
+                  "PC-050"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "type": "decision",
+  "node_id": "decision_001",
+  "condition_key": "sign_001",
+  "left": {
+    "type": "decision",
+    "node_id": "decision_overlap_001",
+    "condition_key": "sign_003",
+    "left": {
+      "type": "diagnosis",
+      "node_id": "leaf_055",
+      "problem_codes": [
+        "PC-001",
+        "PC-003"
+      ]
+    },
+    "right": {
+      "type": "diagnosis",
+      "node_id": "leaf_054",
+      "problem_codes": [
+        "PC-001"
+      ]
+    }
+  },
+  "right": {
+    "type": "decision",
+    "node_id": "decision_002",
+    "condition_key": "sign_002",
+    "left": {
+      "type": "diagnosis",
+      "node_id": "leaf_053",
+      "problem_codes": [
+        "PC-002"
+      ]
+    },
+    "right": {
+      "type": "decision",
+      "node_id": "decision_003",
+      "condition_key": "sign_003",
+      "left": {
+        "type": "diagnosis",
+        "node_id": "leaf_052",
+        "problem_codes": [
+          "PC-003"
+        ]
+      },
+      "right": {
+        "type": "decision",
+        "node_id": "decision_004",
+        "condition_key": "sign_004",
+        "left": {
+          "type": "diagnosis",
+          "node_id": "leaf_051",
+          "problem_codes": [
+            "PC-004"
+          ]
+        },
+        "right": {
+          "type": "decision",
+          "node_id": "decision_005",
+          "condition_key": "sign_005",
+          "left": {
+            "type": "diagnosis",
+            "node_id": "leaf_050",
+            "problem_codes": [
+              "PC-005"
+            ]
+          },
+          "right": {
+            "type": "decision",
+            "node_id": "decision_006",
+            "condition_key": "sign_006",
+            "left": {
+              "type": "diagnosis",
+              "node_id": "leaf_049",
+              "problem_codes": [
+                "PC-006"
+              ]
+            },
+            "right": {
+              "type": "decision",
+              "node_id": "decision_007",
+              "condition_key": "sign_007",
+              "left": {
+                "type": "diagnosis",
+                "node_id": "leaf_048",
+                "problem_codes": [
+                  "PC-007"
+                ]
+              },
+              "right": {
+                "type": "decision",
+                "node_id": "decision_008",
+                "condition_key": "sign_008",
+                "left": {
+                  "type": "diagnosis",
+                  "node_id": "leaf_047",
+                  "problem_codes": [
+                    "PC-008"
+                  ]
+                },
+                "right": {
+                  "type": "decision",
+                  "node_id": "decision_009",
+                  "condition_key": "sign_009",
+                  "left": {
+                    "type": "diagnosis",
+                    "node_id": "leaf_046",
+                    "problem_codes": [
+                      "PC-009"
+                    ]
+                  },
+                  "right": {
+                    "type": "decision",
+                    "node_id": "decision_010",
+                    "condition_key": "sign_010",
+                    "left": {
+                      "type": "diagnosis",
+                      "node_id": "leaf_045",
+                      "problem_codes": [
+                        "PC-010"
+                      ]
+                    },
+                    "right": {
+                      "type": "decision",
+                      "node_id": "decision_011",
+                      "condition_key": "sign_011",
+                      "left": {
+                        "type": "diagnosis",
+                        "node_id": "leaf_044",
+                        "problem_codes": [
+                          "PC-011"
+                        ]
+                      },
+                      "right": {
+                        "type": "decision",
+                        "node_id": "decision_012",
+                        "condition_key": "sign_012",
+                        "left": {
+                          "type": "diagnosis",
+                          "node_id": "leaf_043",
+                          "problem_codes": [
+                            "PC-012"
+                          ]
+                        },
+                        "right": {
+                          "type": "decision",
+                          "node_id": "decision_013",
+                          "condition_key": "sign_013",
+                          "left": {
+                            "type": "diagnosis",
+                            "node_id": "leaf_042",
+                            "problem_codes": [
+                              "PC-013"
+                            ]
+                          },
+                          "right": {
+                            "type": "decision",
+                            "node_id": "decision_014",
+                            "condition_key": "sign_014",
+                            "left": {
+                              "type": "diagnosis",
+                              "node_id": "leaf_041",
+                              "problem_codes": [
+                                "PC-014"
+                              ]
+                            },
+                            "right": {
+                              "type": "decision",
+                              "node_id": "decision_015",
+                              "condition_key": "sign_015",
+                              "left": {
+                                "type": "diagnosis",
+                                "node_id": "leaf_040",
+                                "problem_codes": [
+                                  "PC-015"
+                                ]
+                              },
+                              "right": {
+                                "type": "decision",
+                                "node_id": "decision_016",
+                                "condition_key": "sign_016",
+                                "left": {
+                                  "type": "diagnosis",
+                                  "node_id": "leaf_039",
+                                  "problem_codes": [
+                                    "PC-016"
+                                  ]
+                                },
+                                "right": {
+                                  "type": "decision",
+                                  "node_id": "decision_017",
+                                  "condition_key": "sign_017",
+                                  "left": {
+                                    "type": "diagnosis",
+                                    "node_id": "leaf_038",
+                                    "problem_codes": [
+                                      "PC-017"
+                                    ]
+                                  },
+                                  "right": {
+                                    "type": "decision",
+                                    "node_id": "decision_018",
+                                    "condition_key": "sign_018",
+                                    "left": {
+                                      "type": "diagnosis",
+                                      "node_id": "leaf_037",
+                                      "problem_codes": [
+                                        "PC-018"
+                                      ]
+                                    },
+                                    "right": {
+                                      "type": "decision",
+                                      "node_id": "decision_019",
+                                      "condition_key": "sign_019",
+                                      "left": {
+                                        "type": "diagnosis",
+                                        "node_id": "leaf_036",
+                                        "problem_codes": [
+                                          "PC-019"
+                                        ]
+                                      },
+                                      "right": {
+                                        "type": "decision",
+                                        "node_id": "decision_020",
+                                        "condition_key": "sign_020",
+                                        "left": {
+                                          "type": "diagnosis",
+                                          "node_id": "leaf_035",
+                                          "problem_codes": [
+                                            "PC-020"
+                                          ]
+                                        },
+                                        "right": {
+                                          "type": "decision",
+                                          "node_id": "decision_021",
+                                          "condition_key": "sign_021",
+                                          "left": {
+                                            "type": "diagnosis",
+                                            "node_id": "leaf_034",
+                                            "problem_codes": [
+                                              "PC-021"
+                                            ]
+                                          },
+                                          "right": {
+                                            "type": "decision",
+                                            "node_id": "decision_022",
+                                            "condition_key": "sign_022",
+                                            "left": {
+                                              "type": "decision",
+                                              "node_id": "decision_overlap_024",
+                                              "condition_key": "sign_024",
+                                              "left": {
+                                                "type": "diagnosis",
+                                                "node_id": "leaf_031",
+                                                "problem_codes": [
+                                                  "PC-024",
+                                                  "PC-022"
+                                                ]
+                                              },
+                                              "right": {
+                                                "type": "diagnosis",
+                                                "node_id": "leaf_033",
+                                                "problem_codes": [
+                                                  "PC-022"
+                                                ]
+                                              }
+                                            },
+                                            "right": {
+                                              "type": "decision",
+                                              "node_id": "decision_023",
+                                              "condition_key": "sign_023",
+                                              "left": {
+                                                "type": "diagnosis",
+                                                "node_id": "leaf_032",
+                                                "problem_codes": [
+                                                  "PC-023"
+                                                ]
+                                              },
+                                              "right": {
+                                                "type": "decision",
+                                                "node_id": "decision_024",
+                                                "condition_key": "sign_024",
+                                                "left": {
+                                                  "type": "diagnosis",
+                                                  "node_id": "leaf_030",
+                                                  "problem_codes": [
+                                                    "PC-024"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "type": "decision",
+                                                  "node_id": "decision_025",
+                                                  "condition_key": "sign_025",
+                                                  "left": {
+                                                    "type": "diagnosis",
+                                                    "node_id": "leaf_029",
+                                                    "problem_codes": [
+                                                      "PC-025"
+                                                    ]
+                                                  },
+                                                  "right": {
+                                                    "type": "decision",
+                                                    "node_id": "decision_026",
+                                                    "condition_key": "sign_026",
+                                                    "left": {
+                                                      "type": "diagnosis",
+                                                      "node_id": "leaf_028",
+                                                      "problem_codes": [
+                                                        "PC-026"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "type": "decision",
+                                                      "node_id": "decision_027",
+                                                      "condition_key": "sign_027",
+                                                      "left": {
+                                                        "type": "diagnosis",
+                                                        "node_id": "leaf_027",
+                                                        "problem_codes": [
+                                                          "PC-027"
+                                                        ]
+                                                      },
+                                                      "right": {
+                                                        "type": "decision",
+                                                        "node_id": "decision_028",
+                                                        "condition_key": "sign_028",
+                                                        "left": {
+                                                          "type": "diagnosis",
+                                                          "node_id": "leaf_026",
+                                                          "problem_codes": [
+                                                            "PC-028"
+                                                          ]
+                                                        },
+                                                        "right": {
+                                                          "type": "decision",
+                                                          "node_id": "decision_029",
+                                                          "condition_key": "sign_029",
+                                                          "left": {
+                                                            "type": "diagnosis",
+                                                            "node_id": "leaf_025",
+                                                            "problem_codes": [
+                                                              "PC-029"
+                                                            ]
+                                                          },
+                                                          "right": {
+                                                            "type": "decision",
+                                                            "node_id": "decision_030",
+                                                            "condition_key": "sign_030",
+                                                            "left": {
+                                                              "type": "diagnosis",
+                                                              "node_id": "leaf_024",
+                                                              "problem_codes": [
+                                                                "PC-030"
+                                                              ]
+                                                            },
+                                                            "right": {
+                                                              "type": "decision",
+                                                              "node_id": "decision_031",
+                                                              "condition_key": "sign_031",
+                                                              "left": {
+                                                                "type": "diagnosis",
+                                                                "node_id": "leaf_023",
+                                                                "problem_codes": [
+                                                                  "PC-031"
+                                                                ]
+                                                              },
+                                                              "right": {
+                                                                "type": "decision",
+                                                                "node_id": "decision_032",
+                                                                "condition_key": "sign_032",
+                                                                "left": {
+                                                                  "type": "diagnosis",
+                                                                  "node_id": "leaf_022",
+                                                                  "problem_codes": [
+                                                                    "PC-032"
+                                                                  ]
+                                                                },
+                                                                "right": {
+                                                                  "type": "decision",
+                                                                  "node_id": "decision_033",
+                                                                  "condition_key": "sign_033",
+                                                                  "left": {
+                                                                    "type": "diagnosis",
+                                                                    "node_id": "leaf_021",
+                                                                    "problem_codes": [
+                                                                      "PC-033"
+                                                                    ]
+                                                                  },
+                                                                  "right": {
+                                                                    "type": "decision",
+                                                                    "node_id": "decision_034",
+                                                                    "condition_key": "sign_034",
+                                                                    "left": {
+                                                                      "type": "diagnosis",
+                                                                      "node_id": "leaf_020",
+                                                                      "problem_codes": [
+                                                                        "PC-034"
+                                                                      ]
+                                                                    },
+                                                                    "right": {
+                                                                      "type": "decision",
+                                                                      "node_id": "decision_035",
+                                                                      "condition_key": "sign_035",
+                                                                      "left": {
+                                                                        "type": "diagnosis",
+                                                                        "node_id": "leaf_019",
+                                                                        "problem_codes": [
+                                                                          "PC-035"
+                                                                        ]
+                                                                      },
+                                                                      "right": {
+                                                                        "type": "decision",
+                                                                        "node_id": "decision_036",
+                                                                        "condition_key": "sign_036",
+                                                                        "left": {
+                                                                          "type": "diagnosis",
+                                                                          "node_id": "leaf_018",
+                                                                          "problem_codes": [
+                                                                            "PC-036"
+                                                                          ]
+                                                                        },
+                                                                        "right": {
+                                                                          "type": "decision",
+                                                                          "node_id": "decision_037",
+                                                                          "condition_key": "sign_037",
+                                                                          "left": {
+                                                                            "type": "diagnosis",
+                                                                            "node_id": "leaf_017",
+                                                                            "problem_codes": [
+                                                                              "PC-037"
+                                                                            ]
+                                                                          },
+                                                                          "right": {
+                                                                            "type": "decision",
+                                                                            "node_id": "decision_038",
+                                                                            "condition_key": "sign_038",
+                                                                            "left": {
+                                                                              "type": "diagnosis",
+                                                                              "node_id": "leaf_016",
+                                                                              "problem_codes": [
+                                                                                "PC-038"
+                                                                              ]
+                                                                            },
+                                                                            "right": {
+                                                                              "type": "decision",
+                                                                              "node_id": "decision_039",
+                                                                              "condition_key": "sign_039",
+                                                                              "left": {
+                                                                                "type": "decision",
+                                                                                "node_id": "decision_overlap_039",
+                                                                                "condition_key": "sign_040",
+                                                                                "left": {
+                                                                                  "type": "diagnosis",
+                                                                                  "node_id": "leaf_015",
+                                                                                  "problem_codes": [
+                                                                                    "PC-039",
+                                                                                    "PC-040"
+                                                                                  ]
+                                                                                },
+                                                                                "right": {
+                                                                                  "type": "diagnosis",
+                                                                                  "node_id": "leaf_014",
+                                                                                  "problem_codes": [
+                                                                                    "PC-039"
+                                                                                  ]
+                                                                                }
+                                                                              },
+                                                                              "right": {
+                                                                                "type": "decision",
+                                                                                "node_id": "decision_040",
+                                                                                "condition_key": "sign_040",
+                                                                                "left": {
+                                                                                  "type": "diagnosis",
+                                                                                  "node_id": "leaf_013",
+                                                                                  "problem_codes": [
+                                                                                    "PC-040"
+                                                                                  ]
+                                                                                },
+                                                                                "right": {
+                                                                                  "type": "decision",
+                                                                                  "node_id": "decision_041",
+                                                                                  "condition_key": "sign_041",
+                                                                                  "left": {
+                                                                                    "type": "diagnosis",
+                                                                                    "node_id": "leaf_012",
+                                                                                    "problem_codes": [
+                                                                                      "PC-041"
+                                                                                    ]
+                                                                                  },
+                                                                                  "right": {
+                                                                                    "type": "decision",
+                                                                                    "node_id": "decision_042",
+                                                                                    "condition_key": "sign_042",
+                                                                                    "left": {
+                                                                                      "type": "diagnosis",
+                                                                                      "node_id": "leaf_011",
+                                                                                      "problem_codes": [
+                                                                                        "PC-042"
+                                                                                      ]
+                                                                                    },
+                                                                                    "right": {
+                                                                                      "type": "decision",
+                                                                                      "node_id": "decision_043",
+                                                                                      "condition_key": "sign_043",
+                                                                                      "left": {
+                                                                                        "type": "diagnosis",
+                                                                                        "node_id": "leaf_010",
+                                                                                        "problem_codes": [
+                                                                                          "PC-043"
+                                                                                        ]
+                                                                                      },
+                                                                                      "right": {
+                                                                                        "type": "decision",
+                                                                                        "node_id": "decision_044",
+                                                                                        "condition_key": "sign_044",
+                                                                                        "left": {
+                                                                                          "type": "diagnosis",
+                                                                                          "node_id": "leaf_009",
+                                                                                          "problem_codes": [
+                                                                                            "PC-044"
+                                                                                          ]
+                                                                                        },
+                                                                                        "right": {
+                                                                                          "type": "decision",
+                                                                                          "node_id": "decision_045",
+                                                                                          "condition_key": "sign_045",
+                                                                                          "left": {
+                                                                                            "type": "diagnosis",
+                                                                                            "node_id": "leaf_008",
+                                                                                            "problem_codes": [
+                                                                                              "PC-045"
+                                                                                            ]
+                                                                                          },
+                                                                                          "right": {
+                                                                                            "type": "decision",
+                                                                                            "node_id": "decision_046",
+                                                                                            "condition_key": "sign_046",
+                                                                                            "left": {
+                                                                                              "type": "diagnosis",
+                                                                                              "node_id": "leaf_007",
+                                                                                              "problem_codes": [
+                                                                                                "PC-046"
+                                                                                              ]
+                                                                                            },
+                                                                                            "right": {
+                                                                                              "type": "decision",
+                                                                                              "node_id": "decision_047",
+                                                                                              "condition_key": "sign_047",
+                                                                                              "left": {
+                                                                                                "type": "diagnosis",
+                                                                                                "node_id": "leaf_006",
+                                                                                                "problem_codes": [
+                                                                                                  "PC-047"
+                                                                                                ]
+                                                                                              },
+                                                                                              "right": {
+                                                                                                "type": "decision",
+                                                                                                "node_id": "decision_048",
+                                                                                                "condition_key": "sign_048",
+                                                                                                "left": {
+                                                                                                  "type": "decision",
+                                                                                                  "node_id": "decision_overlap_048",
+                                                                                                  "condition_key": "sign_049",
+                                                                                                  "left": {
+                                                                                                    "type": "diagnosis",
+                                                                                                    "node_id": "leaf_005",
+                                                                                                    "problem_codes": [
+                                                                                                      "PC-048",
+                                                                                                      "PC-049"
+                                                                                                    ]
+                                                                                                  },
+                                                                                                  "right": {
+                                                                                                    "type": "diagnosis",
+                                                                                                    "node_id": "leaf_004",
+                                                                                                    "problem_codes": [
+                                                                                                      "PC-048"
+                                                                                                    ]
+                                                                                                  }
+                                                                                                },
+                                                                                                "right": {
+                                                                                                  "type": "decision",
+                                                                                                  "node_id": "decision_049",
+                                                                                                  "condition_key": "sign_049",
+                                                                                                  "left": {
+                                                                                                    "type": "diagnosis",
+                                                                                                    "node_id": "leaf_003",
+                                                                                                    "problem_codes": [
+                                                                                                      "PC-049"
+                                                                                                    ]
+                                                                                                  },
+                                                                                                  "right": {
+                                                                                                    "type": "decision",
+                                                                                                    "node_id": "decision_050",
+                                                                                                    "condition_key": "sign_050",
+                                                                                                    "left": {
+                                                                                                      "type": "diagnosis",
+                                                                                                      "node_id": "leaf_002",
+                                                                                                      "problem_codes": [
+                                                                                                        "PC-050"
+                                                                                                      ]
+                                                                                                    },
+                                                                                                    "right": {
+                                                                                                      "type": "diagnosis",
+                                                                                                      "node_id": "leaf_001",
+                                                                                                      "problem_codes": [
+                                                                                                        "PC-001",
+                                                                                                        "PC-002",
+                                                                                                        "PC-003",
+                                                                                                        "PC-004",
+                                                                                                        "PC-005"
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

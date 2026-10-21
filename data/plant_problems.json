@@ -1,0 +1,623 @@
+{
+  "catalogue_name": "PlantCare Tree - 50 problemas y 50 orientaciones de manejo",
+  "version": "1.0",
+  "language": "es",
+  "catalogue_status": "referencia_inicial_pendiente_de_validacion_por_especie",
+  "source_document": "PlantCare_Tree_50_Problemas_y_50_Soluciones_Organicas.pdf",
+  "total_problems": 50,
+  "purpose": "Base documental para diseñar y evaluar el árbol binario de decisiones y preparar datos de prueba; no constituye diagnóstico confirmado.",
+  "usage_notes": [
+    "Los códigos PC-001 a PC-050 identifican fichas del catálogo, no enfermedades confirmadas.",
+    "Los síntomas pueden solaparse: la información disponible puede respaldar varios candidatos o ser insuficiente.",
+    "Las recomendaciones son orientaciones iniciales no químicas y requieren validación según especie, cultivo y contexto.",
+    "Los casos sintéticos para data augmentation deben etiquetarse como tales y mantenerse separados de observaciones reales.",
+    "Ollama debe explicar los candidatos del árbol usando fichas verificadas; no inventar diagnósticos ni curas."
+  ],
+  "references": {
+    "R1": {
+      "title": "RHS - Cómo evaluar una planta de interior enferma",
+      "url": "https://www.rhs.org.uk/plants/types/houseplants/how-to-help-a-poorly-houseplant"
+    },
+    "R2": {
+      "title": "RHS - Deficiencias de nutrientes",
+      "url": "https://www.rhs.org.uk/prevention-protection/nutrient-deficiencies"
+    },
+    "R3": {
+      "title": "UC IPM - Problemas de plantas de interior",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/houseplant-problems/"
+    },
+    "R4": {
+      "title": "RHS - Manejo de plagas y enfermedades sin químicos",
+      "url": "https://www.rhs.org.uk/prevention-protection/controlling-pests-and-diseases-without-chemicals"
+    },
+    "R5": {
+      "title": "UC IPM - Orugas defoliadoras",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/leaf-feeding-caterpillars/"
+    },
+    "R6": {
+      "title": "UC IPM - Caracoles y babosas",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/snails-and-slugs/"
+    },
+    "R7": {
+      "title": "UC IPM - Ácaros",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/spider-mites/"
+    },
+    "R8": {
+      "title": "UC IPM - Mosquitos del sustrato",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/fungus-gnats/"
+    },
+    "R9": {
+      "title": "Universidad de Minnesota - Manejo de enfermedades del huerto",
+      "url": "https://es.extension.umn.edu/jard%C3%ADn-y-hogar/patio-y-jard%C3%ADn/problemas-de-patio-y-jard%C3%ADn/Manejo-de-enfermedades-de-las-plantas-en-el-huerto-dom%C3%A9stico"
+    },
+    "R10": {
+      "title": "Universidad de Minnesota - Prevención del mal del talluelo",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/how-to-prevent-seedling-damping-off"
+    },
+    "R11": {
+      "title": "RHS - Virus de las plantas y ausencia de tratamiento curativo",
+      "url": "https://www.rhs.org.uk/problems/pelargonium-viruses"
+    },
+    "R12": {
+      "title": "UC IPM - Minadores de hojas",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/foliage-miners/"
+    },
+    "R13": {
+      "title": "UC IPM - Nematodos agalladores",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/root-knot-nematodes/"
+    },
+    "R14": {
+      "title": "UC IPM - Psílidos",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/psyllids/"
+    },
+    "R15": {
+      "title": "UC IPM - Cicadélidos / chicharritas",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/leafhoppers/"
+    },
+    "R16": {
+      "title": "UC IPM - Barrenadores de madera",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/longhorned-beetles-or-roundheaded-wood-borers/"
+    },
+    "R17": {
+      "title": "RHS - Daños de hojas en plantas de interior",
+      "url": "https://www.rhs.org.uk/prevention-protection/leaf-damage-on-houseplants"
+    },
+    "R18": {
+      "title": "UC IPM - Manejo integrado de plagas (MIP)",
+      "url": "https://ipm.ucanr.edu/home-and-landscape/spanish/manejo-integrado-de-plagas/"
+    },
+    "R19": {
+      "title": "RHS - Higiene y disposición de material vegetal enfermo",
+      "url": "https://www.rhs.org.uk/prevention-protection/disposing-of-diseased-material"
+    },
+    "R20": {
+      "title": "Universidad de Minnesota - Mancha bacteriana de tomate y pimiento",
+      "url": "https://es.extension.umn.edu/agriculture/specialty-crops/vegetable-farming/disease-management/bacterial-spot-of-tomato-and-pepper"
+    }
+  },
+  "problems": [
+    {
+      "code": "PC-001",
+      "name": "Exceso de riego",
+      "indicative_symptoms": "Hojas amarillas, marchitez con sustrato muy húmedo y secado lento.",
+      "organic_or_nonchemical_management": "Dejar secar según necesidades de la especie; vaciar platillos y revisar raíces y drenaje.",
+      "differential_considerations": "No confundir con sequía o pudrición radicular ya establecida.",
+      "reference_ids": [
+        "R1",
+        "R3"
+      ]
+    },
+    {
+      "code": "PC-002",
+      "name": "Riego insuficiente",
+      "indicative_symptoms": "Sustrato seco, hojas caídas y bordes crujientes; maceta ligera.",
+      "organic_or_nonchemical_management": "Regar profundamente cuando corresponda y mantener humedad adecuada sin encharcar.",
+      "differential_considerations": "Confirmar humedad a profundidad, no solo en la superficie.",
+      "reference_ids": [
+        "R1",
+        "R17"
+      ]
+    },
+    {
+      "code": "PC-003",
+      "name": "Drenaje deficiente",
+      "indicative_symptoms": "Agua acumulada, raíces con poco oxígeno y crecimiento débil.",
+      "organic_or_nonchemical_management": "Usar recipiente con orificios y sustrato aireado adecuado a la especie.",
+      "differential_considerations": "Puede coexistir con exceso de riego y enfermedad radicular.",
+      "reference_ids": [
+        "R1",
+        "R3"
+      ]
+    },
+    {
+      "code": "PC-004",
+      "name": "Sustrato compactado",
+      "indicative_symptoms": "El agua penetra mal o se estanca; raíces poco vigorosas.",
+      "organic_or_nonchemical_management": "Renovar suavemente el medio por uno estructurado y aireado; evitar apretarlo.",
+      "differential_considerations": "Revisar si el problema principal es falta de drenaje.",
+      "reference_ids": [
+        "R1",
+        "R3"
+      ]
+    },
+    {
+      "code": "PC-005",
+      "name": "Raíces confinadas en maceta",
+      "indicative_symptoms": "Raíces enrolladas, secado muy rápido y crecimiento detenido.",
+      "organic_or_nonchemical_management": "Trasplantar a recipiente ligeramente mayor con sustrato apropiado.",
+      "differential_considerations": "No trasplantar sin comprobar raíces y necesidades de la especie.",
+      "reference_ids": [
+        "R1",
+        "R17"
+      ]
+    },
+    {
+      "code": "PC-006",
+      "name": "Humedad ambiental insuficiente",
+      "indicative_symptoms": "Puntas secas, bordes marrones y caída de brotes en especies tropicales.",
+      "organic_or_nonchemical_management": "Agrupar plantas compatibles y usar bandeja de humedad sin que la maceta quede sumergida.",
+      "differential_considerations": "Descartar falta de riego o salinidad.",
+      "reference_ids": [
+        "R1"
+      ]
+    },
+    {
+      "code": "PC-007",
+      "name": "Ventilación escasa y humedad estancada",
+      "indicative_symptoms": "Condensación, follaje húmedo persistente o moho superficial.",
+      "organic_or_nonchemical_management": "Separar plantas, favorecer circulación suave y retirar material deteriorado.",
+      "differential_considerations": "Comprobar si existe enfermedad activa.",
+      "reference_ids": [
+        "R1",
+        "R4"
+      ]
+    },
+    {
+      "code": "PC-008",
+      "name": "Luz insuficiente",
+      "indicative_symptoms": "Tallos alargados, hojas pálidas, escasa floración.",
+      "organic_or_nonchemical_management": "Mover gradualmente hacia la iluminación adecuada para la especie.",
+      "differential_considerations": "Evitar exponer de golpe al sol directo.",
+      "reference_ids": [
+        "R1",
+        "R3"
+      ]
+    },
+    {
+      "code": "PC-009",
+      "name": "Quemadura por sol directo",
+      "indicative_symptoms": "Parches blanquecinos o marrones en hojas expuestas.",
+      "organic_or_nonchemical_management": "Dar sombra filtrada y aclimatar progresivamente a mayor luz.",
+      "differential_considerations": "Diferenciar de manchas infecciosas.",
+      "reference_ids": [
+        "R1",
+        "R17"
+      ]
+    },
+    {
+      "code": "PC-010",
+      "name": "Estrés por frío",
+      "indicative_symptoms": "Tejidos ennegrecidos o blandos tras exposición a bajas temperaturas.",
+      "organic_or_nonchemical_management": "Retirar de corrientes frías; mantener rango térmico propio de la especie.",
+      "differential_considerations": "Considerar infección si el daño continúa expandiéndose.",
+      "reference_ids": [
+        "R1",
+        "R17"
+      ]
+    },
+    {
+      "code": "PC-011",
+      "name": "Estrés por calor",
+      "indicative_symptoms": "Marchitez con temperaturas altas, bordes secos y caída floral.",
+      "organic_or_nonchemical_management": "Aumentar sombra en horas intensas, mejorar ventilación y ajustar riego.",
+      "differential_considerations": "No asumir que siempre hace falta más agua.",
+      "reference_ids": [
+        "R1"
+      ]
+    },
+    {
+      "code": "PC-012",
+      "name": "Exceso de fertilizante o salinidad",
+      "indicative_symptoms": "Costra de sales, puntas quemadas y detención del crecimiento.",
+      "organic_or_nonchemical_management": "Suspender abonado; valorar trasplante a sustrato fresco y corregir pautas.",
+      "differential_considerations": "Diferenciar de sequía o baja humedad.",
+      "reference_ids": [
+        "R1",
+        "R17"
+      ]
+    },
+    {
+      "code": "PC-013",
+      "name": "Posible deficiencia de nitrógeno",
+      "indicative_symptoms": "Amarillamiento general en hojas antiguas y escaso vigor.",
+      "organic_or_nonchemical_management": "Descartar raíces estresadas; nutrir con compost maduro o abono orgánico equilibrado apropiado.",
+      "differential_considerations": "La clorosis sola no confirma carencia.",
+      "reference_ids": [
+        "R2"
+      ]
+    },
+    {
+      "code": "PC-014",
+      "name": "Posible deficiencia de fósforo",
+      "indicative_symptoms": "Crecimiento lento; a veces coloración púrpura en especies sensibles.",
+      "organic_or_nonchemical_management": "Evaluar pH y temperatura del sustrato; corregir nutrición mediante análisis y enmiendas adecuadas.",
+      "differential_considerations": "No diagnosticable solo por hojas moradas.",
+      "reference_ids": [
+        "R2"
+      ]
+    },
+    {
+      "code": "PC-015",
+      "name": "Posible deficiencia de potasio",
+      "indicative_symptoms": "Bordes necróticos en hojas maduras y desarrollo débil.",
+      "organic_or_nonchemical_management": "Evaluar riego y fertilización; aportar nutrición balanceada según cultivo.",
+      "differential_considerations": "Diferenciar de salinidad o quemaduras.",
+      "reference_ids": [
+        "R2"
+      ]
+    },
+    {
+      "code": "PC-016",
+      "name": "Posible deficiencia de magnesio",
+      "indicative_symptoms": "Clorosis entre nervaduras de hojas maduras.",
+      "organic_or_nonchemical_management": "Comprobar pH y nutrición; usar enmienda apropiada solo si la carencia es probable.",
+      "differential_considerations": "Puede confundirse con estrés de raíces.",
+      "reference_ids": [
+        "R2"
+      ]
+    },
+    {
+      "code": "PC-017",
+      "name": "Posible deficiencia de hierro",
+      "indicative_symptoms": "Hojas nuevas amarillas con nervaduras relativamente verdes.",
+      "organic_or_nonchemical_management": "Comprobar pH y drenaje; corregir condiciones que bloquean la absorción.",
+      "differential_considerations": "No es exclusiva de falta de hierro en el suelo.",
+      "reference_ids": [
+        "R2",
+        "R17"
+      ]
+    },
+    {
+      "code": "PC-018",
+      "name": "Posible deficiencia de calcio",
+      "indicative_symptoms": "Brotes jóvenes deformados; en frutos susceptibles, necrosis apical.",
+      "organic_or_nonchemical_management": "Mantener riego regular y nutrición balanceada; verificar disponibilidad de calcio.",
+      "differential_considerations": "La pudrición apical depende también del transporte de agua.",
+      "reference_ids": [
+        "R2"
+      ]
+    },
+    {
+      "code": "PC-019",
+      "name": "Posible deficiencia de azufre",
+      "indicative_symptoms": "Amarillamiento en crecimiento joven y desarrollo limitado.",
+      "organic_or_nonchemical_management": "Confirmar con características de la especie o análisis; mejorar nutrición orgánica equilibrada.",
+      "differential_considerations": "Confundir con nitrógeno es frecuente.",
+      "reference_ids": [
+        "R2"
+      ]
+    },
+    {
+      "code": "PC-020",
+      "name": "Clorosis asociada a pH inadecuado",
+      "indicative_symptoms": "Amarillamiento entre nervaduras pese a abonado; agua o suelo alcalinos.",
+      "organic_or_nonchemical_management": "Medir pH y seleccionar sustrato adecuado; evitar correcciones bruscas sin medición.",
+      "differential_considerations": "Puede existir deficiencia inducida, no ausencia real del nutriente.",
+      "reference_ids": [
+        "R2",
+        "R17"
+      ]
+    },
+    {
+      "code": "PC-021",
+      "name": "Oídio o cenicilla",
+      "indicative_symptoms": "Polvo blanquecino en hojas o tallos y tejido debilitado.",
+      "organic_or_nonchemical_management": "Retirar tejido afectado cuando sea viable; airear y evitar excesos de nitrógeno.",
+      "differential_considerations": "Confirmar que el blanco sea micelio y no polvo o insectos.",
+      "reference_ids": [
+        "R4",
+        "R9"
+      ]
+    },
+    {
+      "code": "PC-022",
+      "name": "Mildiu velloso",
+      "indicative_symptoms": "Manchas amarillas angulares y, a veces, crecimiento velloso debajo de hojas.",
+      "organic_or_nonchemical_management": "Reducir tiempo de humedad foliar, airear y eliminar material enfermo.",
+      "differential_considerations": "Requiere confirmar hospedante y signos; no equivale a oídio.",
+      "reference_ids": [
+        "R4",
+        "R9"
+      ]
+    },
+    {
+      "code": "PC-023",
+      "name": "Roya foliar",
+      "indicative_symptoms": "Pústulas anaranjadas, amarillas o marrones y caída foliar.",
+      "organic_or_nonchemical_management": "Retirar hojas afectadas; mejorar separación y evitar mojar el follaje al regar.",
+      "differential_considerations": "Verificar pústulas, no solo manchas de color.",
+      "reference_ids": [
+        "R4",
+        "R9"
+      ]
+    },
+    {
+      "code": "PC-024",
+      "name": "Mancha foliar fúngica",
+      "indicative_symptoms": "Lesiones redondas o irregulares, a veces con halo; avance en ambiente húmedo.",
+      "organic_or_nonchemical_management": "Quitar material infectado y hojas caídas; regar al pie y aumentar ventilación.",
+      "differential_considerations": "Bacterias y daños abióticos también producen manchas.",
+      "reference_ids": [
+        "R9",
+        "R19"
+      ]
+    },
+    {
+      "code": "PC-025",
+      "name": "Moho gris (Botrytis)",
+      "indicative_symptoms": "Vello grisáceo en flores u hojas marchitas; podredumbre con humedad alta.",
+      "organic_or_nonchemical_management": "Retirar material afectado, disminuir condensación y separar plantas.",
+      "differential_considerations": "No confundir con polvo o micelio de otra enfermedad.",
+      "reference_ids": [
+        "R1",
+        "R4"
+      ]
+    },
+    {
+      "code": "PC-026",
+      "name": "Antracnosis",
+      "indicative_symptoms": "Lesiones hundidas en frutos, tallos u hojas según cultivo.",
+      "organic_or_nonchemical_management": "Retirar restos enfermos y frutos dañados; mejorar aireación y evitar salpicaduras.",
+      "differential_considerations": "La identificación depende de la especie y patógeno.",
+      "reference_ids": [
+        "R9",
+        "R19"
+      ]
+    },
+    {
+      "code": "PC-027",
+      "name": "Tizón temprano / Alternaria",
+      "indicative_symptoms": "Manchas oscuras con anillos concéntricos en cultivos susceptibles.",
+      "organic_or_nonchemical_management": "Retirar hojas infectadas, mantener hojas secas y rotar cultivos de la misma familia.",
+      "differential_considerations": "La sola presencia de anillos no confirma el agente.",
+      "reference_ids": [
+        "R9"
+      ]
+    },
+    {
+      "code": "PC-028",
+      "name": "Pudrición radicular asociada a patógenos",
+      "indicative_symptoms": "Raíces oscuras o blandas, decaimiento y suelo húmedo.",
+      "organic_or_nonchemical_management": "Retirar tejido muy afectado cuando proceda; sanear macetas y mejorar drenaje; aislar.",
+      "differential_considerations": "Puede parecerse a exceso de riego sin infección.",
+      "reference_ids": [
+        "R3",
+        "R9"
+      ]
+    },
+    {
+      "code": "PC-029",
+      "name": "Mal del talluelo en plántulas",
+      "indicative_symptoms": "Plántulas se doblan en la base; cuello acuoso y adelgazado.",
+      "organic_or_nonchemical_management": "Retirar plántulas afectadas; usar bandejas limpias, mezcla nueva y riego moderado.",
+      "differential_considerations": "Las plántulas colapsadas suelen no recuperarse.",
+      "reference_ids": [
+        "R10"
+      ]
+    },
+    {
+      "code": "PC-030",
+      "name": "Sospecha de virosis tipo mosaico",
+      "indicative_symptoms": "Moteado irregular, deformaciones persistentes y crecimiento reducido.",
+      "organic_or_nonchemical_management": "Aislar; no intercambiar esquejes; desinfectar herramientas y buscar confirmación; retirar plantas confirmadas.",
+      "differential_considerations": "No existe cura de virus; síntomas pueden deberse a nutrición o plagas.",
+      "reference_ids": [
+        "R11",
+        "R19"
+      ]
+    },
+    {
+      "code": "PC-031",
+      "name": "Orugas defoliadoras",
+      "indicative_symptoms": "Agujeros irregulares, excrementos y larvas masticando hojas.",
+      "organic_or_nonchemical_management": "Inspeccionar al atardecer y retirar manualmente; conservar enemigos naturales.",
+      "differential_considerations": "Distinguir de babosas con rastros de baba.",
+      "reference_ids": [
+        "R5"
+      ]
+    },
+    {
+      "code": "PC-032",
+      "name": "Pulgones o áfidos",
+      "indicative_symptoms": "Colonias en brotes tiernos, hojas enrolladas y melaza pegajosa.",
+      "organic_or_nonchemical_management": "Lavar con chorro moderado de agua; podar brotes muy infestados y favorecer mariquitas.",
+      "differential_considerations": "Pueden confundirse con psílidos u otros chupadores.",
+      "reference_ids": [
+        "R3",
+        "R18"
+      ]
+    },
+    {
+      "code": "PC-033",
+      "name": "Mosca blanca",
+      "indicative_symptoms": "Adultos blancos vuelan al mover la planta; amarillamiento y melaza.",
+      "organic_or_nonchemical_management": "Revisar envés; retirar hojas muy afectadas, colocar trampas adhesivas para monitorear.",
+      "differential_considerations": "Diferenciar de mosquitos del sustrato.",
+      "reference_ids": [
+        "R3"
+      ]
+    },
+    {
+      "code": "PC-034",
+      "name": "Cochinilla algodonosa",
+      "indicative_symptoms": "Masas blancas algodonosas en nudos y envés; melaza.",
+      "organic_or_nonchemical_management": "Aislar y retirar insectos manualmente; lavar zonas accesibles y vigilar rebrote.",
+      "differential_considerations": "Revisar hendiduras y bases de hojas.",
+      "reference_ids": [
+        "R3"
+      ]
+    },
+    {
+      "code": "PC-035",
+      "name": "Cochinillas de escama",
+      "indicative_symptoms": "Pequeñas cubiertas inmóviles adheridas a tallos u hojas.",
+      "organic_or_nonchemical_management": "Raspar suavemente focos pequeños; podar partes infestadas y revisar juveniles.",
+      "differential_considerations": "Algunas escamas parecen manchas naturales.",
+      "reference_ids": [
+        "R3"
+      ]
+    },
+    {
+      "code": "PC-036",
+      "name": "Trips",
+      "indicative_symptoms": "Rayas plateadas, deformación y puntos negros; insectos delgados.",
+      "organic_or_nonchemical_management": "Inspeccionar flores y envés; retirar focos, usar mallas y conservar depredadores.",
+      "differential_considerations": "Comprobar presencia con sacudida sobre papel blanco.",
+      "reference_ids": [
+        "R3",
+        "R18"
+      ]
+    },
+    {
+      "code": "PC-037",
+      "name": "Ácaros tetraníquidos (araña roja)",
+      "indicative_symptoms": "Punteado claro, broncedo y finas telarañas; puntitos móviles debajo de hojas.",
+      "organic_or_nonchemical_management": "Lavar envés con agua cuando la especie lo tolere; bajar polvo y estrés hídrico.",
+      "differential_considerations": "Los ácaros no son insectos; usar lupa.",
+      "reference_ids": [
+        "R7"
+      ]
+    },
+    {
+      "code": "PC-038",
+      "name": "Minadores de hojas",
+      "indicative_symptoms": "Galerías sinuosas claras dentro del tejido foliar.",
+      "organic_or_nonchemical_management": "Retirar hojas más afectadas y favorecer insectos parasitoides; no usar controles indiscriminados.",
+      "differential_considerations": "Diferenciar galerías internas de mordeduras externas.",
+      "reference_ids": [
+        "R12"
+      ]
+    },
+    {
+      "code": "PC-039",
+      "name": "Babosas",
+      "indicative_symptoms": "Agujeros irregulares y rastros brillantes; actividad nocturna.",
+      "organic_or_nonchemical_management": "Retirar a mano de noche y quitar refugios húmedos; regar temprano.",
+      "differential_considerations": "Las babosas carecen de concha externa.",
+      "reference_ids": [
+        "R6"
+      ]
+    },
+    {
+      "code": "PC-040",
+      "name": "Caracoles",
+      "indicative_symptoms": "Mordeduras en hojas tiernas, baba y moluscos con concha.",
+      "organic_or_nonchemical_management": "Recolectar manualmente y reducir escondites; proteger plántulas con barreras adecuadas.",
+      "differential_considerations": "Diferenciar de babosas y orugas.",
+      "reference_ids": [
+        "R6"
+      ]
+    },
+    {
+      "code": "PC-041",
+      "name": "Mosquitos del sustrato",
+      "indicative_symptoms": "Pequeñas moscas oscuras alrededor de tierra húmeda; larvas en medio orgánico.",
+      "organic_or_nonchemical_management": "Dejar secar la superficie cuando la especie lo permita; mejorar drenaje y retirar restos.",
+      "differential_considerations": "Adultos suelen ser molestia; daño por larvas suele ser en plántulas.",
+      "reference_ids": [
+        "R8"
+      ]
+    },
+    {
+      "code": "PC-042",
+      "name": "Mosca de la fruta en frutos",
+      "indicative_symptoms": "Frutos con picaduras, ablandamiento o larvas; insectos cerca de fruta madura.",
+      "organic_or_nonchemical_management": "Retirar frutos dañados y caídos, cosechar a tiempo y usar trampas de monitoreo específicas.",
+      "differential_considerations": "Confirmar especie y cultivo: las moscas de cocina no son necesariamente plaga del fruto.",
+      "reference_ids": [
+        "R18"
+      ]
+    },
+    {
+      "code": "PC-043",
+      "name": "Escarabajos defoliadores",
+      "indicative_symptoms": "Agujeros o bordes recortados; adultos duros presentes al inspeccionar.",
+      "organic_or_nonchemical_management": "Recolectar insectos al amanecer si son pocos; usar barreras físicas en plantas pequeñas.",
+      "differential_considerations": "Varias especies causan daños distintos.",
+      "reference_ids": [
+        "R18"
+      ]
+    },
+    {
+      "code": "PC-044",
+      "name": "Gorgojos de follaje y raíces",
+      "indicative_symptoms": "Muescas semicirculares en hojas; algunas larvas dañan raíces.",
+      "organic_or_nonchemical_management": "Inspeccionar de noche y retirar adultos; revisar sustrato y evitar mover material infestado.",
+      "differential_considerations": "Diferenciar de orugas o daño mecánico.",
+      "reference_ids": [
+        "R18"
+      ]
+    },
+    {
+      "code": "PC-045",
+      "name": "Chinches fitófagas",
+      "indicative_symptoms": "Punteado, lesiones o frutos deformados; chinches que perforan tejidos.",
+      "organic_or_nonchemical_management": "Inspeccionar y retirar manualmente ejemplares cuando sea viable; eliminar malezas refugio.",
+      "differential_considerations": "No todas las chinches son plagas; existen depredadoras útiles.",
+      "reference_ids": [
+        "R18"
+      ]
+    },
+    {
+      "code": "PC-046",
+      "name": "Barrenadores de tallo o madera",
+      "indicative_symptoms": "Orificios en ramas, serrín fino, ramas que se secan.",
+      "organic_or_nonchemical_management": "Mantener planta vigorosa y evitar heridas; retirar ramas muy afectadas según especie.",
+      "differential_considerations": "Exige identificar el barrenador, especialmente en árboles.",
+      "reference_ids": [
+        "R16"
+      ]
+    },
+    {
+      "code": "PC-047",
+      "name": "Nematodos agalladores de raíz",
+      "indicative_symptoms": "Agallas en raíces y crecimiento débil aunque haya riego adecuado.",
+      "organic_or_nonchemical_management": "Evitar mover tierra contaminada; usar variedades resistentes y rotación cuando aplique.",
+      "differential_considerations": "La identificación debe confirmarse en raíces o laboratorio.",
+      "reference_ids": [
+        "R13"
+      ]
+    },
+    {
+      "code": "PC-048",
+      "name": "Psílidos",
+      "indicative_symptoms": "Pequeños insectos saltadores, melaza y deformación de brotes.",
+      "organic_or_nonchemical_management": "Conservar depredadores, evitar fertilización nitrogenada excesiva y monitorear brotes.",
+      "differential_considerations": "Algunas especies transmiten enfermedades graves: solicitar identificación.",
+      "reference_ids": [
+        "R14"
+      ]
+    },
+    {
+      "code": "PC-049",
+      "name": "Chicharritas o cicadélidos",
+      "indicative_symptoms": "Punteado pálido y pequeños insectos que saltan al mover la hoja.",
+      "organic_or_nonchemical_management": "Inspeccionar envés y favorecer enemigos naturales; tolerar daños leves cuando sea posible.",
+      "differential_considerations": "Pueden transmitir patógenos; daño visual no confirma especie.",
+      "reference_ids": [
+        "R15"
+      ]
+    },
+    {
+      "code": "PC-050",
+      "name": "Cochinilla radicular",
+      "indicative_symptoms": "Masas cerosas blancas entre raíces de maceta y crecimiento débil.",
+      "organic_or_nonchemical_management": "Aislar planta; revisar raíces al trasplantar, retirar sustrato muy infestado y usar recipiente limpio.",
+      "differential_considerations": "Descartar residuos normales del sustrato; confirmar presencia de organismos.",
+      "reference_ids": [
+        "R3",
+        "R18"
+      ]
+    }
+  ]
+}

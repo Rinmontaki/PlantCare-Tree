@@ -1,0 +1,372 @@
+{
+  "has_water_roots_001_002": {
+    "any_of": [
+      "sign_001"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_water_roots_004_005": {
+    "any_of": [
+      "sign_004"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_water_roots_003_004_005": {
+    "any_of": [
+      "sign_003"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_water_roots_001_002_003_004_005": {
+    "any_of": [
+      "sign_001",
+      "sign_002"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_light_environment_006_007": {
+    "any_of": [
+      "sign_006"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_light_environment_009_010": {
+    "any_of": [
+      "sign_009"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_light_environment_008_009_010": {
+    "any_of": [
+      "sign_008"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_light_environment_006_007_008_009_010": {
+    "any_of": [
+      "sign_006",
+      "sign_007"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_heat_nutrition_011_012": {
+    "any_of": [
+      "sign_011"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_heat_nutrition_014_015": {
+    "any_of": [
+      "sign_014"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_heat_nutrition_013_014_015": {
+    "any_of": [
+      "sign_013"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_heat_nutrition_011_012_013_014_015": {
+    "any_of": [
+      "sign_011",
+      "sign_012"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_minerals_ph_016_017": {
+    "any_of": [
+      "sign_016"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_minerals_ph_019_020": {
+    "any_of": [
+      "sign_019"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_minerals_ph_018_019_020": {
+    "any_of": [
+      "sign_018"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_minerals_ph_016_017_018_019_020": {
+    "any_of": [
+      "sign_016",
+      "sign_017"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_foliar_disease_021_022": {
+    "any_of": [
+      "sign_021"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_foliar_disease_024_025": {
+    "any_of": [
+      "sign_024"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_foliar_disease_023_024_025": {
+    "any_of": [
+      "sign_023"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_foliar_disease_021_022_023_024_025": {
+    "any_of": [
+      "sign_021",
+      "sign_022"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_deep_disease_026_027": {
+    "any_of": [
+      "sign_026"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_deep_disease_029_030": {
+    "any_of": [
+      "sign_029"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_deep_disease_028_029_030": {
+    "any_of": [
+      "sign_028"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_deep_disease_026_027_028_029_030": {
+    "any_of": [
+      "sign_026",
+      "sign_027"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_aerial_pests_031_032": {
+    "any_of": [
+      "sign_031"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_aerial_pests_034_035": {
+    "any_of": [
+      "sign_034"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_aerial_pests_033_034_035": {
+    "any_of": [
+      "sign_033"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_aerial_pests_031_032_033_034_035": {
+    "any_of": [
+      "sign_031",
+      "sign_032"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_leaf_soil_pests_036_037": {
+    "any_of": [
+      "sign_036"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_leaf_soil_pests_039_040": {
+    "any_of": [
+      "sign_039"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_leaf_soil_pests_038_039_040": {
+    "any_of": [
+      "sign_038"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_leaf_soil_pests_036_037_038_039_040": {
+    "any_of": [
+      "sign_036",
+      "sign_037"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_special_pests_041_042": {
+    "any_of": [
+      "sign_041"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_special_pests_044_045": {
+    "any_of": [
+      "sign_044"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_special_pests_043_044_045": {
+    "any_of": [
+      "sign_043"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_special_pests_041_042_043_044_045": {
+    "any_of": [
+      "sign_041",
+      "sign_042"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_stem_root_pests_046_047": {
+    "any_of": [
+      "sign_046"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_stem_root_pests_049_050": {
+    "any_of": [
+      "sign_049"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_stem_root_pests_048_049_050": {
+    "any_of": [
+      "sign_048"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_stem_root_pests_046_047_048_049_050": {
+    "any_of": [
+      "sign_046",
+      "sign_047"
+    ],
+    "meaning": "Does the observation match this group of symptoms?"
+  },
+  "has_abiotic_water_roots": {
+    "any_of": [
+      "sign_001",
+      "sign_002",
+      "sign_003",
+      "sign_004",
+      "sign_005"
+    ],
+    "meaning": "Water or substrate evidence versus light and environment"
+  },
+  "has_abiotic_nutrition": {
+    "any_of": [
+      "sign_011",
+      "sign_012",
+      "sign_013",
+      "sign_014",
+      "sign_015"
+    ],
+    "meaning": "Heat or general nutrition versus mineral or pH signs"
+  },
+  "has_abiotic_environment": {
+    "any_of": [
+      "sign_001",
+      "sign_002",
+      "sign_003",
+      "sign_004",
+      "sign_005",
+      "sign_006",
+      "sign_007",
+      "sign_008",
+      "sign_009",
+      "sign_010"
+    ],
+    "meaning": "Water, roots, or environment versus nutrition"
+  },
+  "has_diseases_foliar": {
+    "any_of": [
+      "sign_021",
+      "sign_022",
+      "sign_023",
+      "sign_024",
+      "sign_025"
+    ],
+    "meaning": "Foliar disease signs versus other disease signs"
+  },
+  "has_pests_aerial": {
+    "any_of": [
+      "sign_031",
+      "sign_032",
+      "sign_033",
+      "sign_034",
+      "sign_035"
+    ],
+    "meaning": "Common aerial pests versus leaf or soil pests"
+  },
+  "has_pests_special": {
+    "any_of": [
+      "sign_041",
+      "sign_042",
+      "sign_043",
+      "sign_044",
+      "sign_045"
+    ],
+    "meaning": "Specialized insect evidence versus stem or root pests"
+  },
+  "has_pests_aerial_or_leaf": {
+    "any_of": [
+      "sign_031",
+      "sign_032",
+      "sign_033",
+      "sign_034",
+      "sign_035",
+      "sign_036",
+      "sign_037",
+      "sign_038",
+      "sign_039",
+      "sign_040"
+    ],
+    "meaning": "Aerial or leaf/soil pests versus other pests"
+  },
+  "has_biotic_diseases": {
+    "any_of": [
+      "sign_021",
+      "sign_022",
+      "sign_023",
+      "sign_024",
+      "sign_025",
+      "sign_026",
+      "sign_027",
+      "sign_028",
+      "sign_029",
+      "sign_030"
+    ],
+    "meaning": "Disease-associated signs versus visible pests"
+  },
+  "has_domain_abiotic": {
+    "any_of": [
+      "sign_001",
+      "sign_002",
+      "sign_003",
+      "sign_004",
+      "sign_005",
+      "sign_006",
+      "sign_007",
+      "sign_008",
+      "sign_009",
+      "sign_010",
+      "sign_011",
+      "sign_012",
+      "sign_013",
+      "sign_014",
+      "sign_015",
+      "sign_016",
+      "sign_017",
+      "sign_018",
+      "sign_019",
+      "sign_020"
+    ],
+    "meaning": "Care, environment, or nutrition evidence versus biological agents"
+  }
+}

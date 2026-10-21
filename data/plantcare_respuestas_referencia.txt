@@ -1,0 +1,257 @@
+PLANTCARE TREE - BASE TXT DE REFERENCIA
+Generada exclusivamente de data/plant_problems.json.
+Estado: orientaciones iniciales. No son diagnósticos botánicos confirmados.
+Las respuestas deben verificarse según la especie y el contexto.
+
+FICHAS DE REFERENCIA
+====================
+
+===== PC-001 =====
+NOMBRE: Exceso de riego
+SINTOMAS: Hojas amarillas, marchitez con sustrato muy húmedo y secado lento.
+MANEJO: Dejar secar según necesidades de la especie; vaciar platillos y revisar raíces y drenaje.
+
+===== PC-002 =====
+NOMBRE: Riego insuficiente
+SINTOMAS: Sustrato seco, hojas caídas y bordes crujientes; maceta ligera.
+MANEJO: Regar profundamente cuando corresponda y mantener humedad adecuada sin encharcar.
+
+===== PC-003 =====
+NOMBRE: Drenaje deficiente
+SINTOMAS: Agua acumulada, raíces con poco oxígeno y crecimiento débil.
+MANEJO: Usar recipiente con orificios y sustrato aireado adecuado a la especie.
+
+===== PC-004 =====
+NOMBRE: Sustrato compactado
+SINTOMAS: El agua penetra mal o se estanca; raíces poco vigorosas.
+MANEJO: Renovar suavemente el medio por uno estructurado y aireado; evitar apretarlo.
+
+===== PC-005 =====
+NOMBRE: Raíces confinadas en maceta
+SINTOMAS: Raíces enrolladas, secado muy rápido y crecimiento detenido.
+MANEJO: Trasplantar a recipiente ligeramente mayor con sustrato apropiado.
+
+===== PC-006 =====
+NOMBRE: Humedad ambiental insuficiente
+SINTOMAS: Puntas secas, bordes marrones y caída de brotes en especies tropicales.
+MANEJO: Agrupar plantas compatibles y usar bandeja de humedad sin que la maceta quede sumergida.
+
+===== PC-007 =====
+NOMBRE: Ventilación escasa y humedad estancada
+SINTOMAS: Condensación, follaje húmedo persistente o moho superficial.
+MANEJO: Separar plantas, favorecer circulación suave y retirar material deteriorado.
+
+===== PC-008 =====
+NOMBRE: Luz insuficiente
+SINTOMAS: Tallos alargados, hojas pálidas, escasa floración.
+MANEJO: Mover gradualmente hacia la iluminación adecuada para la especie.
+
+===== PC-009 =====
+NOMBRE: Quemadura por sol directo
+SINTOMAS: Parches blanquecinos o marrones en hojas expuestas.
+MANEJO: Dar sombra filtrada y aclimatar progresivamente a mayor luz.
+
+===== PC-010 =====
+NOMBRE: Estrés por frío
+SINTOMAS: Tejidos ennegrecidos o blandos tras exposición a bajas temperaturas.
+MANEJO: Retirar de corrientes frías; mantener rango térmico propio de la especie.
+
+===== PC-011 =====
+NOMBRE: Estrés por calor
+SINTOMAS: Marchitez con temperaturas altas, bordes secos y caída floral.
+MANEJO: Aumentar sombra en horas intensas, mejorar ventilación y ajustar riego.
+
+===== PC-012 =====
+NOMBRE: Exceso de fertilizante o salinidad
+SINTOMAS: Costra de sales, puntas quemadas y detención del crecimiento.
+MANEJO: Suspender abonado; valorar trasplante a sustrato fresco y corregir pautas.
+
+===== PC-013 =====
+NOMBRE: Posible deficiencia de nitrógeno
+SINTOMAS: Amarillamiento general en hojas antiguas y escaso vigor.
+MANEJO: Descartar raíces estresadas; nutrir con compost maduro o abono orgánico equilibrado apropiado.
+
+===== PC-014 =====
+NOMBRE: Posible deficiencia de fósforo
+SINTOMAS: Crecimiento lento; a veces coloración púrpura en especies sensibles.
+MANEJO: Evaluar pH y temperatura del sustrato; corregir nutrición mediante análisis y enmiendas adecuadas.
+
+===== PC-015 =====
+NOMBRE: Posible deficiencia de potasio
+SINTOMAS: Bordes necróticos en hojas maduras y desarrollo débil.
+MANEJO: Evaluar riego y fertilización; aportar nutrición balanceada según cultivo.
+
+===== PC-016 =====
+NOMBRE: Posible deficiencia de magnesio
+SINTOMAS: Clorosis entre nervaduras de hojas maduras.
+MANEJO: Comprobar pH y nutrición; usar enmienda apropiada solo si la carencia es probable.
+
+===== PC-017 =====
+NOMBRE: Posible deficiencia de hierro
+SINTOMAS: Hojas nuevas amarillas con nervaduras relativamente verdes.
+MANEJO: Comprobar pH y drenaje; corregir condiciones que bloquean la absorción.
+
+===== PC-018 =====
+NOMBRE: Posible deficiencia de calcio
+SINTOMAS: Brotes jóvenes deformados; en frutos susceptibles, necrosis apical.
+MANEJO: Mantener riego regular y nutrición balanceada; verificar disponibilidad de calcio.
+
+===== PC-019 =====
+NOMBRE: Posible deficiencia de azufre
+SINTOMAS: Amarillamiento en crecimiento joven y desarrollo limitado.
+MANEJO: Confirmar con características de la especie o análisis; mejorar nutrición orgánica equilibrada.
+
+===== PC-020 =====
+NOMBRE: Clorosis asociada a pH inadecuado
+SINTOMAS: Amarillamiento entre nervaduras pese a abonado; agua o suelo alcalinos.
+MANEJO: Medir pH y seleccionar sustrato adecuado; evitar correcciones bruscas sin medición.
+
+===== PC-021 =====
+NOMBRE: Oídio o cenicilla
+SINTOMAS: Polvo blanquecino en hojas o tallos y tejido debilitado.
+MANEJO: Retirar tejido afectado cuando sea viable; airear y evitar excesos de nitrógeno.
+
+===== PC-022 =====
+NOMBRE: Mildiu velloso
+SINTOMAS: Manchas amarillas angulares y, a veces, crecimiento velloso debajo de hojas.
+MANEJO: Reducir tiempo de humedad foliar, airear y eliminar material enfermo.
+
+===== PC-023 =====
+NOMBRE: Roya foliar
+SINTOMAS: Pústulas anaranjadas, amarillas o marrones y caída foliar.
+MANEJO: Retirar hojas afectadas; mejorar separación y evitar mojar el follaje al regar.
+
+===== PC-024 =====
+NOMBRE: Mancha foliar fúngica
+SINTOMAS: Lesiones redondas o irregulares, a veces con halo; avance en ambiente húmedo.
+MANEJO: Quitar material infectado y hojas caídas; regar al pie y aumentar ventilación.
+
+===== PC-025 =====
+NOMBRE: Moho gris (Botrytis)
+SINTOMAS: Vello grisáceo en flores u hojas marchitas; podredumbre con humedad alta.
+MANEJO: Retirar material afectado, disminuir condensación y separar plantas.
+
+===== PC-026 =====
+NOMBRE: Antracnosis
+SINTOMAS: Lesiones hundidas en frutos, tallos u hojas según cultivo.
+MANEJO: Retirar restos enfermos y frutos dañados; mejorar aireación y evitar salpicaduras.
+
+===== PC-027 =====
+NOMBRE: Tizón temprano / Alternaria
+SINTOMAS: Manchas oscuras con anillos concéntricos en cultivos susceptibles.
+MANEJO: Retirar hojas infectadas, mantener hojas secas y rotar cultivos de la misma familia.
+
+===== PC-028 =====
+NOMBRE: Pudrición radicular asociada a patógenos
+SINTOMAS: Raíces oscuras o blandas, decaimiento y suelo húmedo.
+MANEJO: Retirar tejido muy afectado cuando proceda; sanear macetas y mejorar drenaje; aislar.
+
+===== PC-029 =====
+NOMBRE: Mal del talluelo en plántulas
+SINTOMAS: Plántulas se doblan en la base; cuello acuoso y adelgazado.
+MANEJO: Retirar plántulas afectadas; usar bandejas limpias, mezcla nueva y riego moderado.
+
+===== PC-030 =====
+NOMBRE: Sospecha de virosis tipo mosaico
+SINTOMAS: Moteado irregular, deformaciones persistentes y crecimiento reducido.
+MANEJO: Aislar; no intercambiar esquejes; desinfectar herramientas y buscar confirmación; retirar plantas confirmadas.
+
+===== PC-031 =====
+NOMBRE: Orugas defoliadoras
+SINTOMAS: Agujeros irregulares, excrementos y larvas masticando hojas.
+MANEJO: Inspeccionar al atardecer y retirar manualmente; conservar enemigos naturales.
+
+===== PC-032 =====
+NOMBRE: Pulgones o áfidos
+SINTOMAS: Colonias en brotes tiernos, hojas enrolladas y melaza pegajosa.
+MANEJO: Lavar con chorro moderado de agua; podar brotes muy infestados y favorecer mariquitas.
+
+===== PC-033 =====
+NOMBRE: Mosca blanca
+SINTOMAS: Adultos blancos vuelan al mover la planta; amarillamiento y melaza.
+MANEJO: Revisar envés; retirar hojas muy afectadas, colocar trampas adhesivas para monitorear.
+
+===== PC-034 =====
+NOMBRE: Cochinilla algodonosa
+SINTOMAS: Masas blancas algodonosas en nudos y envés; melaza.
+MANEJO: Aislar y retirar insectos manualmente; lavar zonas accesibles y vigilar rebrote.
+
+===== PC-035 =====
+NOMBRE: Cochinillas de escama
+SINTOMAS: Pequeñas cubiertas inmóviles adheridas a tallos u hojas.
+MANEJO: Raspar suavemente focos pequeños; podar partes infestadas y revisar juveniles.
+
+===== PC-036 =====
+NOMBRE: Trips
+SINTOMAS: Rayas plateadas, deformación y puntos negros; insectos delgados.
+MANEJO: Inspeccionar flores y envés; retirar focos, usar mallas y conservar depredadores.
+
+===== PC-037 =====
+NOMBRE: Ácaros tetraníquidos (araña roja)
+SINTOMAS: Punteado claro, broncedo y finas telarañas; puntitos móviles debajo de hojas.
+MANEJO: Lavar envés con agua cuando la especie lo tolere; bajar polvo y estrés hídrico.
+
+===== PC-038 =====
+NOMBRE: Minadores de hojas
+SINTOMAS: Galerías sinuosas claras dentro del tejido foliar.
+MANEJO: Retirar hojas más afectadas y favorecer insectos parasitoides; no usar controles indiscriminados.
+
+===== PC-039 =====
+NOMBRE: Babosas
+SINTOMAS: Agujeros irregulares y rastros brillantes; actividad nocturna.
+MANEJO: Retirar a mano de noche y quitar refugios húmedos; regar temprano.
+
+===== PC-040 =====
+NOMBRE: Caracoles
+SINTOMAS: Mordeduras en hojas tiernas, baba y moluscos con concha.
+MANEJO: Recolectar manualmente y reducir escondites; proteger plántulas con barreras adecuadas.
+
+===== PC-041 =====
+NOMBRE: Mosquitos del sustrato
+SINTOMAS: Pequeñas moscas oscuras alrededor de tierra húmeda; larvas en medio orgánico.
+MANEJO: Dejar secar la superficie cuando la especie lo permita; mejorar drenaje y retirar restos.
+
+===== PC-042 =====
+NOMBRE: Mosca de la fruta en frutos
+SINTOMAS: Frutos con picaduras, ablandamiento o larvas; insectos cerca de fruta madura.
+MANEJO: Retirar frutos dañados y caídos, cosechar a tiempo y usar trampas de monitoreo específicas.
+
+===== PC-043 =====
+NOMBRE: Escarabajos defoliadores
+SINTOMAS: Agujeros o bordes recortados; adultos duros presentes al inspeccionar.
+MANEJO: Recolectar insectos al amanecer si son pocos; usar barreras físicas en plantas pequeñas.
+
+===== PC-044 =====
+NOMBRE: Gorgojos de follaje y raíces
+SINTOMAS: Muescas semicirculares en hojas; algunas larvas dañan raíces.
+MANEJO: Inspeccionar de noche y retirar adultos; revisar sustrato y evitar mover material infestado.
+
+===== PC-045 =====
+NOMBRE: Chinches fitófagas
+SINTOMAS: Punteado, lesiones o frutos deformados; chinches que perforan tejidos.
+MANEJO: Inspeccionar y retirar manualmente ejemplares cuando sea viable; eliminar malezas refugio.
+
+===== PC-046 =====
+NOMBRE: Barrenadores de tallo o madera
+SINTOMAS: Orificios en ramas, serrín fino, ramas que se secan.
+MANEJO: Mantener planta vigorosa y evitar heridas; retirar ramas muy afectadas según especie.
+
+===== PC-047 =====
+NOMBRE: Nematodos agalladores de raíz
+SINTOMAS: Agallas en raíces y crecimiento débil aunque haya riego adecuado.
+MANEJO: Evitar mover tierra contaminada; usar variedades resistentes y rotación cuando aplique.
+
+===== PC-048 =====
+NOMBRE: Psílidos
+SINTOMAS: Pequeños insectos saltadores, melaza y deformación de brotes.
+MANEJO: Conservar depredadores, evitar fertilización nitrogenada excesiva y monitorear brotes.
+
+===== PC-049 =====
+NOMBRE: Chicharritas o cicadélidos
+SINTOMAS: Punteado pálido y pequeños insectos que saltan al mover la hoja.
+MANEJO: Inspeccionar envés y favorecer enemigos naturales; tolerar daños leves cuando sea posible.
+
+===== PC-050 =====
+NOMBRE: Cochinilla radicular
+SINTOMAS: Masas cerosas blancas entre raíces de maceta y crecimiento débil.
+MANEJO: Aislar planta; revisar raíces al trasplantar, retirar sustrato muy infestado y usar recipiente limpio.
