@@ -1,0 +1,1811 @@
+{
+  "description": "Synthetic regression tests, NOT verified botanical cases",
+  "cases": [
+    {
+      "case_id": "absence-000",
+      "selected_symptoms": [],
+      "expected_codes": [],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-001",
+      "selected_symptoms": [
+        "sign_001"
+      ],
+      "expected_codes": [
+        "PC-001"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-001",
+      "selected_symptoms": [
+        "sign_001",
+        "sign_018"
+      ],
+      "expected_codes": [
+        "PC-001",
+        "PC-018"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-001",
+      "selected_symptoms": [
+        "sign_001",
+        "sign_014",
+        "sign_030"
+      ],
+      "expected_codes": [
+        "PC-001",
+        "PC-014",
+        "PC-030"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-002",
+      "selected_symptoms": [
+        "sign_002"
+      ],
+      "expected_codes": [
+        "PC-002"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-002",
+      "selected_symptoms": [
+        "sign_002",
+        "sign_019"
+      ],
+      "expected_codes": [
+        "PC-002",
+        "PC-019"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-002",
+      "selected_symptoms": [
+        "sign_002",
+        "sign_015",
+        "sign_031"
+      ],
+      "expected_codes": [
+        "PC-002",
+        "PC-015",
+        "PC-031"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-003",
+      "selected_symptoms": [
+        "sign_003"
+      ],
+      "expected_codes": [
+        "PC-003"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-003",
+      "selected_symptoms": [
+        "sign_003",
+        "sign_020"
+      ],
+      "expected_codes": [
+        "PC-003",
+        "PC-020"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-003",
+      "selected_symptoms": [
+        "sign_003",
+        "sign_016",
+        "sign_032"
+      ],
+      "expected_codes": [
+        "PC-003",
+        "PC-016",
+        "PC-032"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-004",
+      "selected_symptoms": [
+        "sign_004"
+      ],
+      "expected_codes": [
+        "PC-004"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-004",
+      "selected_symptoms": [
+        "sign_004",
+        "sign_021"
+      ],
+      "expected_codes": [
+        "PC-004",
+        "PC-021"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-004",
+      "selected_symptoms": [
+        "sign_004",
+        "sign_017",
+        "sign_033"
+      ],
+      "expected_codes": [
+        "PC-004",
+        "PC-017",
+        "PC-033"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-005",
+      "selected_symptoms": [
+        "sign_005"
+      ],
+      "expected_codes": [
+        "PC-005"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-005",
+      "selected_symptoms": [
+        "sign_005",
+        "sign_022"
+      ],
+      "expected_codes": [
+        "PC-005",
+        "PC-022"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-005",
+      "selected_symptoms": [
+        "sign_005",
+        "sign_018",
+        "sign_034"
+      ],
+      "expected_codes": [
+        "PC-005",
+        "PC-018",
+        "PC-034"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-006",
+      "selected_symptoms": [
+        "sign_006"
+      ],
+      "expected_codes": [
+        "PC-006"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-006",
+      "selected_symptoms": [
+        "sign_006",
+        "sign_023"
+      ],
+      "expected_codes": [
+        "PC-006",
+        "PC-023"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-006",
+      "selected_symptoms": [
+        "sign_006",
+        "sign_019",
+        "sign_035"
+      ],
+      "expected_codes": [
+        "PC-006",
+        "PC-019",
+        "PC-035"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-007",
+      "selected_symptoms": [
+        "sign_007"
+      ],
+      "expected_codes": [
+        "PC-007"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-007",
+      "selected_symptoms": [
+        "sign_007",
+        "sign_024"
+      ],
+      "expected_codes": [
+        "PC-007",
+        "PC-024"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-007",
+      "selected_symptoms": [
+        "sign_007",
+        "sign_020",
+        "sign_036"
+      ],
+      "expected_codes": [
+        "PC-007",
+        "PC-020",
+        "PC-036"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-008",
+      "selected_symptoms": [
+        "sign_008"
+      ],
+      "expected_codes": [
+        "PC-008"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-008",
+      "selected_symptoms": [
+        "sign_008",
+        "sign_025"
+      ],
+      "expected_codes": [
+        "PC-008",
+        "PC-025"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-008",
+      "selected_symptoms": [
+        "sign_008",
+        "sign_021",
+        "sign_037"
+      ],
+      "expected_codes": [
+        "PC-008",
+        "PC-021",
+        "PC-037"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-009",
+      "selected_symptoms": [
+        "sign_009"
+      ],
+      "expected_codes": [
+        "PC-009"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-009",
+      "selected_symptoms": [
+        "sign_009",
+        "sign_026"
+      ],
+      "expected_codes": [
+        "PC-009",
+        "PC-026"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-009",
+      "selected_symptoms": [
+        "sign_009",
+        "sign_022",
+        "sign_038"
+      ],
+      "expected_codes": [
+        "PC-009",
+        "PC-022",
+        "PC-038"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-010",
+      "selected_symptoms": [
+        "sign_010"
+      ],
+      "expected_codes": [
+        "PC-010"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-010",
+      "selected_symptoms": [
+        "sign_010",
+        "sign_027"
+      ],
+      "expected_codes": [
+        "PC-010",
+        "PC-027"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-010",
+      "selected_symptoms": [
+        "sign_010",
+        "sign_023",
+        "sign_039"
+      ],
+      "expected_codes": [
+        "PC-010",
+        "PC-023",
+        "PC-039"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-011",
+      "selected_symptoms": [
+        "sign_011"
+      ],
+      "expected_codes": [
+        "PC-011"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-011",
+      "selected_symptoms": [
+        "sign_011",
+        "sign_028"
+      ],
+      "expected_codes": [
+        "PC-011",
+        "PC-028"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-011",
+      "selected_symptoms": [
+        "sign_011",
+        "sign_024",
+        "sign_040"
+      ],
+      "expected_codes": [
+        "PC-011",
+        "PC-024",
+        "PC-040"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-012",
+      "selected_symptoms": [
+        "sign_012"
+      ],
+      "expected_codes": [
+        "PC-012"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-012",
+      "selected_symptoms": [
+        "sign_012",
+        "sign_029"
+      ],
+      "expected_codes": [
+        "PC-012",
+        "PC-029"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-012",
+      "selected_symptoms": [
+        "sign_012",
+        "sign_025",
+        "sign_041"
+      ],
+      "expected_codes": [
+        "PC-012",
+        "PC-025",
+        "PC-041"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-013",
+      "selected_symptoms": [
+        "sign_013"
+      ],
+      "expected_codes": [
+        "PC-013"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-013",
+      "selected_symptoms": [
+        "sign_013",
+        "sign_030"
+      ],
+      "expected_codes": [
+        "PC-013",
+        "PC-030"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-013",
+      "selected_symptoms": [
+        "sign_013",
+        "sign_026",
+        "sign_042"
+      ],
+      "expected_codes": [
+        "PC-013",
+        "PC-026",
+        "PC-042"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-014",
+      "selected_symptoms": [
+        "sign_014"
+      ],
+      "expected_codes": [
+        "PC-014"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-014",
+      "selected_symptoms": [
+        "sign_014",
+        "sign_031"
+      ],
+      "expected_codes": [
+        "PC-014",
+        "PC-031"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-014",
+      "selected_symptoms": [
+        "sign_014",
+        "sign_027",
+        "sign_043"
+      ],
+      "expected_codes": [
+        "PC-014",
+        "PC-027",
+        "PC-043"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-015",
+      "selected_symptoms": [
+        "sign_015"
+      ],
+      "expected_codes": [
+        "PC-015"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-015",
+      "selected_symptoms": [
+        "sign_015",
+        "sign_032"
+      ],
+      "expected_codes": [
+        "PC-015",
+        "PC-032"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-015",
+      "selected_symptoms": [
+        "sign_015",
+        "sign_028",
+        "sign_044"
+      ],
+      "expected_codes": [
+        "PC-015",
+        "PC-028",
+        "PC-044"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-016",
+      "selected_symptoms": [
+        "sign_016"
+      ],
+      "expected_codes": [
+        "PC-016"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-016",
+      "selected_symptoms": [
+        "sign_016",
+        "sign_033"
+      ],
+      "expected_codes": [
+        "PC-016",
+        "PC-033"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-016",
+      "selected_symptoms": [
+        "sign_016",
+        "sign_029",
+        "sign_045"
+      ],
+      "expected_codes": [
+        "PC-016",
+        "PC-029",
+        "PC-045"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-017",
+      "selected_symptoms": [
+        "sign_017"
+      ],
+      "expected_codes": [
+        "PC-017"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-017",
+      "selected_symptoms": [
+        "sign_017",
+        "sign_034"
+      ],
+      "expected_codes": [
+        "PC-017",
+        "PC-034"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-017",
+      "selected_symptoms": [
+        "sign_017",
+        "sign_030",
+        "sign_046"
+      ],
+      "expected_codes": [
+        "PC-017",
+        "PC-030",
+        "PC-046"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-018",
+      "selected_symptoms": [
+        "sign_018"
+      ],
+      "expected_codes": [
+        "PC-018"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-018",
+      "selected_symptoms": [
+        "sign_018",
+        "sign_035"
+      ],
+      "expected_codes": [
+        "PC-018",
+        "PC-035"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-018",
+      "selected_symptoms": [
+        "sign_018",
+        "sign_031",
+        "sign_047"
+      ],
+      "expected_codes": [
+        "PC-018",
+        "PC-031",
+        "PC-047"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-019",
+      "selected_symptoms": [
+        "sign_019"
+      ],
+      "expected_codes": [
+        "PC-019"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-019",
+      "selected_symptoms": [
+        "sign_019",
+        "sign_036"
+      ],
+      "expected_codes": [
+        "PC-019",
+        "PC-036"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-019",
+      "selected_symptoms": [
+        "sign_019",
+        "sign_032",
+        "sign_048"
+      ],
+      "expected_codes": [
+        "PC-019",
+        "PC-032",
+        "PC-048"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-020",
+      "selected_symptoms": [
+        "sign_020"
+      ],
+      "expected_codes": [
+        "PC-020"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-020",
+      "selected_symptoms": [
+        "sign_020",
+        "sign_037"
+      ],
+      "expected_codes": [
+        "PC-020",
+        "PC-037"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-020",
+      "selected_symptoms": [
+        "sign_020",
+        "sign_033",
+        "sign_049"
+      ],
+      "expected_codes": [
+        "PC-020",
+        "PC-033",
+        "PC-049"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-021",
+      "selected_symptoms": [
+        "sign_021"
+      ],
+      "expected_codes": [
+        "PC-021"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-021",
+      "selected_symptoms": [
+        "sign_021",
+        "sign_038"
+      ],
+      "expected_codes": [
+        "PC-021",
+        "PC-038"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-021",
+      "selected_symptoms": [
+        "sign_021",
+        "sign_034",
+        "sign_050"
+      ],
+      "expected_codes": [
+        "PC-021",
+        "PC-034",
+        "PC-050"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-022",
+      "selected_symptoms": [
+        "sign_022"
+      ],
+      "expected_codes": [
+        "PC-022"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-022",
+      "selected_symptoms": [
+        "sign_022",
+        "sign_039"
+      ],
+      "expected_codes": [
+        "PC-022",
+        "PC-039"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-022",
+      "selected_symptoms": [
+        "sign_001",
+        "sign_022",
+        "sign_035"
+      ],
+      "expected_codes": [
+        "PC-001",
+        "PC-022",
+        "PC-035"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-023",
+      "selected_symptoms": [
+        "sign_023"
+      ],
+      "expected_codes": [
+        "PC-023"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-023",
+      "selected_symptoms": [
+        "sign_023",
+        "sign_040"
+      ],
+      "expected_codes": [
+        "PC-023",
+        "PC-040"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-023",
+      "selected_symptoms": [
+        "sign_002",
+        "sign_023",
+        "sign_036"
+      ],
+      "expected_codes": [
+        "PC-002",
+        "PC-023",
+        "PC-036"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-024",
+      "selected_symptoms": [
+        "sign_024"
+      ],
+      "expected_codes": [
+        "PC-024"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-024",
+      "selected_symptoms": [
+        "sign_024",
+        "sign_041"
+      ],
+      "expected_codes": [
+        "PC-024",
+        "PC-041"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-024",
+      "selected_symptoms": [
+        "sign_003",
+        "sign_024",
+        "sign_037"
+      ],
+      "expected_codes": [
+        "PC-003",
+        "PC-024",
+        "PC-037"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-025",
+      "selected_symptoms": [
+        "sign_025"
+      ],
+      "expected_codes": [
+        "PC-025"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-025",
+      "selected_symptoms": [
+        "sign_025",
+        "sign_042"
+      ],
+      "expected_codes": [
+        "PC-025",
+        "PC-042"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-025",
+      "selected_symptoms": [
+        "sign_004",
+        "sign_025",
+        "sign_038"
+      ],
+      "expected_codes": [
+        "PC-004",
+        "PC-025",
+        "PC-038"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-026",
+      "selected_symptoms": [
+        "sign_026"
+      ],
+      "expected_codes": [
+        "PC-026"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-026",
+      "selected_symptoms": [
+        "sign_026",
+        "sign_043"
+      ],
+      "expected_codes": [
+        "PC-026",
+        "PC-043"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-026",
+      "selected_symptoms": [
+        "sign_005",
+        "sign_026",
+        "sign_039"
+      ],
+      "expected_codes": [
+        "PC-005",
+        "PC-026",
+        "PC-039"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-027",
+      "selected_symptoms": [
+        "sign_027"
+      ],
+      "expected_codes": [
+        "PC-027"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-027",
+      "selected_symptoms": [
+        "sign_027",
+        "sign_044"
+      ],
+      "expected_codes": [
+        "PC-027",
+        "PC-044"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-027",
+      "selected_symptoms": [
+        "sign_006",
+        "sign_027",
+        "sign_040"
+      ],
+      "expected_codes": [
+        "PC-006",
+        "PC-027",
+        "PC-040"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-028",
+      "selected_symptoms": [
+        "sign_028"
+      ],
+      "expected_codes": [
+        "PC-028"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-028",
+      "selected_symptoms": [
+        "sign_028",
+        "sign_045"
+      ],
+      "expected_codes": [
+        "PC-028",
+        "PC-045"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-028",
+      "selected_symptoms": [
+        "sign_007",
+        "sign_028",
+        "sign_041"
+      ],
+      "expected_codes": [
+        "PC-007",
+        "PC-028",
+        "PC-041"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-029",
+      "selected_symptoms": [
+        "sign_029"
+      ],
+      "expected_codes": [
+        "PC-029"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-029",
+      "selected_symptoms": [
+        "sign_029",
+        "sign_046"
+      ],
+      "expected_codes": [
+        "PC-029",
+        "PC-046"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-029",
+      "selected_symptoms": [
+        "sign_008",
+        "sign_029",
+        "sign_042"
+      ],
+      "expected_codes": [
+        "PC-008",
+        "PC-029",
+        "PC-042"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-030",
+      "selected_symptoms": [
+        "sign_030"
+      ],
+      "expected_codes": [
+        "PC-030"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-030",
+      "selected_symptoms": [
+        "sign_030",
+        "sign_047"
+      ],
+      "expected_codes": [
+        "PC-030",
+        "PC-047"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-030",
+      "selected_symptoms": [
+        "sign_009",
+        "sign_030",
+        "sign_043"
+      ],
+      "expected_codes": [
+        "PC-009",
+        "PC-030",
+        "PC-043"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-031",
+      "selected_symptoms": [
+        "sign_031"
+      ],
+      "expected_codes": [
+        "PC-031"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-031",
+      "selected_symptoms": [
+        "sign_031",
+        "sign_048"
+      ],
+      "expected_codes": [
+        "PC-031",
+        "PC-048"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-031",
+      "selected_symptoms": [
+        "sign_010",
+        "sign_031",
+        "sign_044"
+      ],
+      "expected_codes": [
+        "PC-010",
+        "PC-031",
+        "PC-044"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-032",
+      "selected_symptoms": [
+        "sign_032"
+      ],
+      "expected_codes": [
+        "PC-032"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-032",
+      "selected_symptoms": [
+        "sign_032",
+        "sign_049"
+      ],
+      "expected_codes": [
+        "PC-032",
+        "PC-049"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-032",
+      "selected_symptoms": [
+        "sign_011",
+        "sign_032",
+        "sign_045"
+      ],
+      "expected_codes": [
+        "PC-011",
+        "PC-032",
+        "PC-045"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-033",
+      "selected_symptoms": [
+        "sign_033"
+      ],
+      "expected_codes": [
+        "PC-033"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-033",
+      "selected_symptoms": [
+        "sign_033",
+        "sign_050"
+      ],
+      "expected_codes": [
+        "PC-033",
+        "PC-050"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-033",
+      "selected_symptoms": [
+        "sign_012",
+        "sign_033",
+        "sign_046"
+      ],
+      "expected_codes": [
+        "PC-012",
+        "PC-033",
+        "PC-046"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-034",
+      "selected_symptoms": [
+        "sign_034"
+      ],
+      "expected_codes": [
+        "PC-034"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-034",
+      "selected_symptoms": [
+        "sign_001",
+        "sign_034"
+      ],
+      "expected_codes": [
+        "PC-001",
+        "PC-034"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-034",
+      "selected_symptoms": [
+        "sign_013",
+        "sign_034",
+        "sign_047"
+      ],
+      "expected_codes": [
+        "PC-013",
+        "PC-034",
+        "PC-047"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-035",
+      "selected_symptoms": [
+        "sign_035"
+      ],
+      "expected_codes": [
+        "PC-035"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-035",
+      "selected_symptoms": [
+        "sign_002",
+        "sign_035"
+      ],
+      "expected_codes": [
+        "PC-002",
+        "PC-035"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-035",
+      "selected_symptoms": [
+        "sign_014",
+        "sign_035",
+        "sign_048"
+      ],
+      "expected_codes": [
+        "PC-014",
+        "PC-035",
+        "PC-048"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-036",
+      "selected_symptoms": [
+        "sign_036"
+      ],
+      "expected_codes": [
+        "PC-036"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-036",
+      "selected_symptoms": [
+        "sign_003",
+        "sign_036"
+      ],
+      "expected_codes": [
+        "PC-003",
+        "PC-036"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-036",
+      "selected_symptoms": [
+        "sign_015",
+        "sign_036",
+        "sign_049"
+      ],
+      "expected_codes": [
+        "PC-015",
+        "PC-036",
+        "PC-049"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-037",
+      "selected_symptoms": [
+        "sign_037"
+      ],
+      "expected_codes": [
+        "PC-037"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-037",
+      "selected_symptoms": [
+        "sign_004",
+        "sign_037"
+      ],
+      "expected_codes": [
+        "PC-004",
+        "PC-037"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-037",
+      "selected_symptoms": [
+        "sign_016",
+        "sign_037",
+        "sign_050"
+      ],
+      "expected_codes": [
+        "PC-016",
+        "PC-037",
+        "PC-050"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-038",
+      "selected_symptoms": [
+        "sign_038"
+      ],
+      "expected_codes": [
+        "PC-038"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-038",
+      "selected_symptoms": [
+        "sign_005",
+        "sign_038"
+      ],
+      "expected_codes": [
+        "PC-005",
+        "PC-038"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-038",
+      "selected_symptoms": [
+        "sign_001",
+        "sign_017",
+        "sign_038"
+      ],
+      "expected_codes": [
+        "PC-001",
+        "PC-017",
+        "PC-038"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-039",
+      "selected_symptoms": [
+        "sign_039"
+      ],
+      "expected_codes": [
+        "PC-039"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-039",
+      "selected_symptoms": [
+        "sign_006",
+        "sign_039"
+      ],
+      "expected_codes": [
+        "PC-006",
+        "PC-039"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-039",
+      "selected_symptoms": [
+        "sign_002",
+        "sign_018",
+        "sign_039"
+      ],
+      "expected_codes": [
+        "PC-002",
+        "PC-018",
+        "PC-039"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-040",
+      "selected_symptoms": [
+        "sign_040"
+      ],
+      "expected_codes": [
+        "PC-040"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-040",
+      "selected_symptoms": [
+        "sign_007",
+        "sign_040"
+      ],
+      "expected_codes": [
+        "PC-007",
+        "PC-040"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-040",
+      "selected_symptoms": [
+        "sign_003",
+        "sign_019",
+        "sign_040"
+      ],
+      "expected_codes": [
+        "PC-003",
+        "PC-019",
+        "PC-040"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-041",
+      "selected_symptoms": [
+        "sign_041"
+      ],
+      "expected_codes": [
+        "PC-041"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-041",
+      "selected_symptoms": [
+        "sign_008",
+        "sign_041"
+      ],
+      "expected_codes": [
+        "PC-008",
+        "PC-041"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-041",
+      "selected_symptoms": [
+        "sign_004",
+        "sign_020",
+        "sign_041"
+      ],
+      "expected_codes": [
+        "PC-004",
+        "PC-020",
+        "PC-041"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-042",
+      "selected_symptoms": [
+        "sign_042"
+      ],
+      "expected_codes": [
+        "PC-042"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-042",
+      "selected_symptoms": [
+        "sign_009",
+        "sign_042"
+      ],
+      "expected_codes": [
+        "PC-009",
+        "PC-042"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-042",
+      "selected_symptoms": [
+        "sign_005",
+        "sign_021",
+        "sign_042"
+      ],
+      "expected_codes": [
+        "PC-005",
+        "PC-021",
+        "PC-042"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-043",
+      "selected_symptoms": [
+        "sign_043"
+      ],
+      "expected_codes": [
+        "PC-043"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-043",
+      "selected_symptoms": [
+        "sign_010",
+        "sign_043"
+      ],
+      "expected_codes": [
+        "PC-010",
+        "PC-043"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-043",
+      "selected_symptoms": [
+        "sign_006",
+        "sign_022",
+        "sign_043"
+      ],
+      "expected_codes": [
+        "PC-006",
+        "PC-022",
+        "PC-043"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-044",
+      "selected_symptoms": [
+        "sign_044"
+      ],
+      "expected_codes": [
+        "PC-044"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-044",
+      "selected_symptoms": [
+        "sign_011",
+        "sign_044"
+      ],
+      "expected_codes": [
+        "PC-011",
+        "PC-044"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-044",
+      "selected_symptoms": [
+        "sign_007",
+        "sign_023",
+        "sign_044"
+      ],
+      "expected_codes": [
+        "PC-007",
+        "PC-023",
+        "PC-044"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-045",
+      "selected_symptoms": [
+        "sign_045"
+      ],
+      "expected_codes": [
+        "PC-045"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-045",
+      "selected_symptoms": [
+        "sign_012",
+        "sign_045"
+      ],
+      "expected_codes": [
+        "PC-012",
+        "PC-045"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-045",
+      "selected_symptoms": [
+        "sign_008",
+        "sign_024",
+        "sign_045"
+      ],
+      "expected_codes": [
+        "PC-008",
+        "PC-024",
+        "PC-045"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-046",
+      "selected_symptoms": [
+        "sign_046"
+      ],
+      "expected_codes": [
+        "PC-046"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-046",
+      "selected_symptoms": [
+        "sign_013",
+        "sign_046"
+      ],
+      "expected_codes": [
+        "PC-013",
+        "PC-046"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-046",
+      "selected_symptoms": [
+        "sign_009",
+        "sign_025",
+        "sign_046"
+      ],
+      "expected_codes": [
+        "PC-009",
+        "PC-025",
+        "PC-046"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-047",
+      "selected_symptoms": [
+        "sign_047"
+      ],
+      "expected_codes": [
+        "PC-047"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-047",
+      "selected_symptoms": [
+        "sign_014",
+        "sign_047"
+      ],
+      "expected_codes": [
+        "PC-014",
+        "PC-047"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-047",
+      "selected_symptoms": [
+        "sign_010",
+        "sign_026",
+        "sign_047"
+      ],
+      "expected_codes": [
+        "PC-010",
+        "PC-026",
+        "PC-047"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-048",
+      "selected_symptoms": [
+        "sign_048"
+      ],
+      "expected_codes": [
+        "PC-048"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-048",
+      "selected_symptoms": [
+        "sign_015",
+        "sign_048"
+      ],
+      "expected_codes": [
+        "PC-015",
+        "PC-048"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-048",
+      "selected_symptoms": [
+        "sign_011",
+        "sign_027",
+        "sign_048"
+      ],
+      "expected_codes": [
+        "PC-011",
+        "PC-027",
+        "PC-048"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-049",
+      "selected_symptoms": [
+        "sign_049"
+      ],
+      "expected_codes": [
+        "PC-049"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-049",
+      "selected_symptoms": [
+        "sign_016",
+        "sign_049"
+      ],
+      "expected_codes": [
+        "PC-016",
+        "PC-049"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-049",
+      "selected_symptoms": [
+        "sign_012",
+        "sign_028",
+        "sign_049"
+      ],
+      "expected_codes": [
+        "PC-012",
+        "PC-028",
+        "PC-049"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "single-050",
+      "selected_symptoms": [
+        "sign_050"
+      ],
+      "expected_codes": [
+        "PC-050"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "pair-050",
+      "selected_symptoms": [
+        "sign_017",
+        "sign_050"
+      ],
+      "expected_codes": [
+        "PC-017",
+        "PC-050"
+      ],
+      "origin": "synthetic_structural"
+    },
+    {
+      "case_id": "triple-050",
+      "selected_symptoms": [
+        "sign_013",
+        "sign_029",
+        "sign_050"
+      ],
+      "expected_codes": [
+        "PC-013",
+        "PC-029",
+        "PC-050"
+      ],
+      "origin": "synthetic_structural"
+    }
+  ]
+}

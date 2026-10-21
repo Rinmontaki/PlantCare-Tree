@@ -140,8 +140,8 @@ def test_session_completes_full_conditional_route(
     assert answers["insect_appearance"] == ("chewing_insects",)
     assert answers["leaf_damage"] == ("irregular_holes",)
     assert answers["soil_condition"] == ("normal_soil",)
-    
-    
+
+
 def test_session_accepts_multiple_insect_characteristics(
     session: QuestionnaireSession,
 ) -> None:
@@ -253,3 +253,40 @@ def test_changing_previous_answer_removes_hidden_answers(
 
     assert session.current_question["id"] == "soil_condition"
 
+
+def test_session_advances_with_explicit_no_symptoms(
+    session: QuestionnaireSession,
+) -> None:
+    """Advance after explicitly reporting no symptoms."""
+    session.submit_no_symptoms()
+
+    assert session.context.get_answers()["leaf_symptoms"] == ()
+    assert session.context.question_count == 1
+
+    assert session.current_question is not None
+    assert session.current_question["id"] == "soil_condition"
+
+    session.submit_answer(("normal_soil",))
+
+    assert session.is_finished is True
+    assert session.context.question_count == 2
+
+
+def test_session_changes_previous_no_symptoms_answer(
+    session: QuestionnaireSession,
+) -> None:
+    """Allow replacing an explicit negative answer."""
+    session.submit_no_symptoms()
+
+    assert session.go_back() is True
+    assert session.current_question is not None
+    assert session.current_question["id"] == "leaf_symptoms"
+
+    session.submit_answer(("visible_insects",))
+
+    assert session.context.get_answers()["leaf_symptoms"] == (
+        "visible_insects",
+    )
+
+    assert session.current_question is not None
+    assert session.current_question["id"] == "insect_appearance"

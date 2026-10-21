@@ -8,7 +8,7 @@ name = "plantcare-tree"
 version = "0.1.0"
 description = "Plant diagnosis system based on binary decision trees."
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["customtkinter>=5.2,<6", "Pillow>=10"]
 
 # Development tools are installed separately from runtime dependencies.
 [project.optional-dependencies]

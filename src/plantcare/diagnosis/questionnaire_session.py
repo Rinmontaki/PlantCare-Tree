@@ -147,6 +147,29 @@ class QuestionnaireSession:
         if next_question is not None:
             self._navigation_history.append(next_question["id"])
 
+
+    def submit_no_symptoms(self) -> None:
+        """Save an explicit negative answer and advance."""
+        question = self._current_question
+
+        if question is None:
+            raise ValueError("The questionnaire is already finished.")
+
+        # Record an answered question without selected symptoms.
+        self._context.record_no_symptoms(question["id"])
+
+        # Remove answers that are no longer applicable.
+        self._remove_inapplicable_answers()
+
+        # Find the next applicable question.
+        next_question = self._find_next_question_after(question["id"])
+
+        self._current_question = next_question
+
+        if next_question is not None:
+            self._navigation_history.append(next_question["id"])
+
+
     def _remove_inapplicable_answers(self) -> None:
         """Remove answers whose visibility conditions are no longer met."""
         answers = self._context.get_answers()
@@ -185,10 +208,16 @@ class QuestionnaireSession:
         for question in self._questions[:current_position + 1]:
             saved_selection = saved_answers.get(question["id"])
 
+
             if saved_selection is not None:
-                partial_context.record_answer(
-                    question_id=question["id"],
-                    selected_option_ids=saved_selection,
-                )
+                if saved_selection:
+                    partial_context.record_answer(
+                        question_id=question["id"],
+                        selected_option_ids=saved_selection,
+                    )
+                else:
+                    partial_context.record_no_symptoms(
+                        question["id"]
+                    )
 
         return self._navigator.get_next_question(partial_context)

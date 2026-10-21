@@ -54,11 +54,27 @@ class DiagnosticContext:
 
         # Store immutable selections to preserve response consistency.
         self._answers[question_id] = selections
-        
-    
+
+
     def remove_answer(self, question_id: str) -> None:
         """Remove a previously recorded diagnostic answer."""
         self._answers.pop(question_id, None)
+
+
+    def record_no_symptoms(self, question_id: str) -> None:
+        """Record an explicitly answered question without symptoms."""
+        if not isinstance(question_id, str) or not question_id.strip():
+            raise ValueError("Question ID cannot be empty.")
+
+        if (
+            question_id not in self._answers
+            and len(self._answers) >= MAX_DIAGNOSTIC_QUESTIONS
+        ):
+            raise ValueError("Maximum diagnostic questions reached.")
+
+        # An empty tuple represents an explicit negative response.
+        self._answers[question_id] = ()
+
 
     @property
     def question_count(self) -> int:

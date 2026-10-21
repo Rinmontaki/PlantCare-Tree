@@ -1,14 +1,11 @@
-"""Application entry point for PlantCare Tree."""
+"""Launch the current PlantCare Tree CustomTkinter questionnaire."""
 
-from plantcare.ui.main_window import PlantCareApp
+from plantcare.ui.questionnaire_window import PlantCareQuestionnaireWindow
 
 
 def main() -> None:
-    """Create and run the PlantCare desktop application."""
-    # Create the main application instance.
-    app = PlantCareApp()
-
-    # Start the Tkinter event loop.
+    """Start the PlantCare desktop application."""
+    app = PlantCareQuestionnaireWindow()
     app.mainloop()
 
 

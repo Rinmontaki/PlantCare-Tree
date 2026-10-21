@@ -1,9 +1,20 @@
 """CustomTkinter diagnostic questionnaire for PlantCare Tree."""
 
+import logging
 from pathlib import Path
+from queue import Empty, Queue
+from threading import Thread
 from tkinter import messagebox
 
 import customtkinter as ctk
+
+from plantcare.ai.explanation_service import generate_diagnostic_explanations
+from plantcare.ai.ollama_client import OllamaClient
+from plantcare.diagnosis.hierarchical_classifier import (
+    HierarchicalClassifier,
+    HierarchicalResult,
+)
+from plantcare.diagnosis.problem_catalog import load_problem_catalog
 from plantcare.diagnosis.questionnaire_loader import load_questionnaire
 from plantcare.diagnosis.questionnaire_session import QuestionnaireSession
 from plantcare.ui.plantcare_theme import PlantCareTheme as Theme
@@ -11,7 +22,9 @@ from plantcare.ui.symptom_option_card import SymptomOptionCard
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
-QUESTIONNAIRE_PATH = PROJECT_ROOT / "data" / "questionnaire.json"
+QUESTIONNAIRE_PATH = (
+    PROJECT_ROOT / "data" / "questionnaire_50_draft.json"
+)
 
 
 SYMPTOM_IMAGES_PATH = (
@@ -45,6 +58,32 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
         self._session = QuestionnaireSession(
             self._questionnaire
         )
+
+        # The hierarchical tree is the only active diagnostic classifier.
+        self._hierarchical_classifier = (
+            HierarchicalClassifier.from_data_directory(PROJECT_ROOT / "data")
+        )
+        self._problem_catalog = load_problem_catalog(
+            PROJECT_ROOT / "data" / "plant_problems.json"
+        )
+        self._symptom_labels = {
+            option["id"]: option["label"]
+            for question in self._questionnaire["questions"]
+            for option in question["options"]
+        }
+
+        # Store AI results without accessing Tkinter from worker threads.
+        self._ai_results: Queue[
+            tuple[int, dict[str, str | None]]
+        ] = Queue()
+
+        # Identify the currently active diagnostic request.
+        self._ai_request_id = 0
+
+        # Keep references to the labels displaying AI explanations.
+        self._ai_result_labels: dict[str, ctk.CTkLabel] = {}
+
+
         self._option_cards: dict[str, SymptomOptionCard] = {}
         self._sidebar_steps: list[
             tuple[ctk.CTkFrame, ctk.CTkLabel, ctk.CTkLabel]
@@ -52,6 +91,9 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
         self._build_sidebar()
         self._build_main_content()
         self._render_current_question()
+
+        # Start polling for completed AI requests.
+        self.after(150, self._poll_ai_results)
 
     def _build_sidebar(self) -> None:
         """Create the botanical sidebar."""
@@ -304,6 +346,10 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
 
     def _render_current_question(self) -> None:
         """Display the current question or completion summary."""
+        # Invalidate pending AI responses when the screen changes.
+        self._ai_request_id += 1
+        self._ai_result_labels.clear()
+
         for widget in self._question_host.winfo_children():
             widget.destroy()
         self._option_cards.clear()
@@ -412,8 +458,8 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
             padx=30,
             pady=(0, 20),
         )
-        
-       
+
+
         for option in question["options"]:
             option_id = option["id"]
 
@@ -455,6 +501,28 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
             saved_card = self._option_cards.get(selected_id)
             if saved_card is not None:
                 saved_card.set_selected(True)
+
+
+        # Allow users to explicitly report no listed symptoms.
+        if multiple_selection:
+            ctk.CTkButton(
+                card,
+                text="Ninguno de estos síntomas",
+                command=self._submit_no_symptoms,
+                fg_color="transparent",
+                hover_color=Theme.SIDEBAR,
+                text_color=Theme.PRIMARY,
+                border_width=1,
+                border_color=Theme.BORDER,
+                corner_radius=Theme.BUTTON_RADIUS,
+                height=42,
+                font=(Theme.FONT_FAMILY, 13, "bold"),
+            ).pack(
+                fill="x",
+                padx=30,
+                pady=(0, 15),
+            )
+
 
         button_area = ctk.CTkFrame(
             card,
@@ -530,6 +598,21 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
         if self._session.go_back():
             self._render_current_question()
 
+
+    def _submit_no_symptoms(self) -> None:
+        """Record no observed symptoms and advance the questionnaire."""
+        try:
+            self._session.submit_no_symptoms()
+        except (ValueError, TypeError) as error:
+            messagebox.showwarning(
+                "Revisa tu respuesta",
+                str(error),
+            )
+            return
+
+        self._render_current_question()
+
+
     def _continue_questionnaire(self) -> None:
         """Save selected options and advance the session."""
         selected_options = tuple(
@@ -570,9 +653,11 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
         ctk.CTkLabel(
             card,
             text=(
-                "Tus observaciones quedaron registradas. "
-                "Este es un resumen provisional mientras "
-                "integramos los resultados del árbol binario."
+                "Tus observaciones fueron analizadas mediante "
+                "nuestro árbol binario de decisión. "
+                "A continuación encontrarás el resultado "
+                "orientativo del diagnóstico y un resumen "
+                "de las respuestas registradas."
             ),
             font=(Theme.FONT_FAMILY, 13),
             text_color=Theme.TEXT_SECONDARY,
@@ -583,6 +668,211 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
             padx=30,
             pady=(0, 20),
         )
+
+        # Classify the recorded observations using the new binary tree.
+        assessment = self._hierarchical_classifier.classify_context(
+            self._session.context
+        )
+
+        if assessment.status == "diagnosed":
+            codes = ", ".join(
+                assessment.diagnosis.problem_codes
+            )
+            result_text = (
+                f"Posibles problemas identificados: {codes}"
+            )
+        elif assessment.status == "insufficient_evidence":
+            result_text = (
+                "Evidencia insuficiente: no se identificaron "
+                "sintomas suficientes para un diagnostico."
+            )
+        else:
+            result_text = (
+                "Diagnostico pendiente: faltan respuestas "
+                "para completar la evaluacion."
+            )
+
+        ctk.CTkLabel(
+            card,
+            text=result_text,
+            font=(Theme.FONT_FAMILY, 15, "bold"),
+            text_color=Theme.PRIMARY,
+            wraplength=620,
+            justify="left",
+        ).pack(
+            anchor="w",
+            padx=30,
+            pady=(0, 20),
+        )
+
+
+        # Display catalogue details for diagnosed plant problems.
+        if assessment.status == "diagnosed" and assessment.diagnosis:
+            # Clarify the meaning of multiple symptom-based results.
+            if len(assessment.diagnosis.problem_codes) > 1:
+                ctk.CTkLabel(
+                    card,
+                    text=(
+                        "Se encontraron varios problemas posibles "
+                        "asociados a los síntomas seleccionados. "
+                        "Esto no confirma que todas las enfermedades "
+                        "estén presentes simultáneamente."
+                    ),
+                    font=(Theme.FONT_FAMILY, 12),
+                    text_color=Theme.TEXT_SECONDARY,
+                    wraplength=620,
+                    justify="left",
+                ).pack(
+                    anchor="w",
+                    padx=30,
+                    pady=(0, 15),
+                )
+            for problem_code in assessment.diagnosis.problem_codes:
+                problem = self._problem_catalog.get(problem_code)
+
+                if problem is None:
+                    raise ValueError(
+                        f"Problem not found in catalogue: {problem_code}"
+                    )
+
+                # Create a visual card for each possible problem.
+                problem_card = ctk.CTkFrame(
+                    card,
+                    fg_color=Theme.BACKGROUND,
+                    corner_radius=12,
+                    border_width=1,
+                    border_color=Theme.BORDER,
+                )
+                problem_card.pack(
+                    fill="x",
+                    padx=30,
+                    pady=(0, 15),
+                )
+
+                # Problem name and identification code.
+                ctk.CTkLabel(
+                    problem_card,
+                    text=f"{problem_code} | {problem['name']}",
+                    font=(Theme.FONT_FAMILY, 17, "bold"),
+                    text_color=Theme.PRIMARY,
+                    wraplength=580,
+                    justify="left",
+                ).pack(
+                    anchor="w",
+                    padx=20,
+                    pady=(20, 12),
+                )
+
+                # Reference symptoms.
+                ctk.CTkLabel(
+                    problem_card,
+                    text="SÍNTOMAS DE REFERENCIA",
+                    font=(Theme.FONT_FAMILY, 11, "bold"),
+                    text_color=Theme.TEXT_PRIMARY,
+                ).pack(
+                    anchor="w",
+                    padx=20,
+                )
+
+                ctk.CTkLabel(
+                    problem_card,
+                    text=problem["indicative_symptoms"],
+                    font=(Theme.FONT_FAMILY, 13),
+                    text_color=Theme.TEXT_SECONDARY,
+                    wraplength=580,
+                    justify="left",
+                ).pack(
+                    anchor="w",
+                    padx=20,
+                    pady=(5, 15),
+                )
+
+                # Organic and nonchemical management.
+                ctk.CTkLabel(
+                    problem_card,
+                    text="MANEJO ORGÁNICO O NO QUÍMICO",
+                    font=(Theme.FONT_FAMILY, 11, "bold"),
+                    text_color=Theme.TEXT_PRIMARY,
+                ).pack(
+                    anchor="w",
+                    padx=20,
+                )
+
+                # Always display the catalogue management BEFORE AI output.
+                ctk.CTkLabel(
+                    problem_card,
+                    text=problem["organic_or_nonchemical_management"],
+                    font=(Theme.FONT_FAMILY, 13),
+                    text_color=Theme.TEXT_SECONDARY,
+                    wraplength=580,
+                    justify="left",
+                ).pack(
+                    anchor="w",
+                    padx=20,
+                    pady=(5, 20),
+                )
+
+                # AI output is optional and must never overwrite catalogue data.
+                ctk.CTkLabel(
+                    problem_card,
+                    text="EXPLICACION ADICIONAL DE PLANTCARE AI",
+                    font=(Theme.FONT_FAMILY, 11, "bold"),
+                    text_color=Theme.PRIMARY,
+                ).pack(
+                    anchor="w",
+                    padx=20,
+                    pady=(0, 8),
+                )
+                ai_label = ctk.CTkLabel(
+                    problem_card,
+                    text="Generando comentario con PlantCare AI...",
+                    font=(Theme.FONT_FAMILY, 13),
+                    text_color=Theme.TEXT_SECONDARY,
+                    wraplength=550,
+                    justify="left",
+                    anchor="w",
+                )
+                ai_label.pack(
+                    fill="x",
+                    padx=20,
+                    pady=(0, 20),
+                )
+                self._ai_result_labels[problem_code] = ai_label
+
+            # Clarify the limits of the diagnostic result.
+            ctk.CTkLabel(
+                card,
+                text=(
+                    "Diagnóstico orientativo basado en los síntomas "
+                    "seleccionados. La identificación puede requerir "
+                    "revisión adicional según la especie y el entorno."
+                ),
+                font=(Theme.FONT_FAMILY, 12),
+                text_color=Theme.TEXT_SECONDARY,
+                wraplength=620,
+                justify="left",
+            ).pack(
+                anchor="w",
+                padx=30,
+                pady=(5, 20),
+            )
+
+            # Cap automatic local model requests while preserving all fichas.
+            if len(assessment.diagnosis.problem_codes) <= 3:
+                Thread(
+                    target=self._run_ai_explanations,
+                    args=(self._ai_request_id, assessment),
+                    daemon=True,
+                ).start()
+            else:
+                for label in self._ai_result_labels.values():
+                    label.configure(
+                        text=(
+                            "Comentario automático omitido por haber más de tres "
+                            "problemas candidatos. Consulta cada ficha del catálogo."
+                        )
+                    )
+
         answers = self._session.context.get_answers()
         for question in self._questionnaire["questions"]:
             selected_ids = answers.get(question["id"])
@@ -596,6 +886,14 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
                 option_labels[option_id]
                 for option_id in selected_ids
             ]
+
+            # Display explicit negative answers clearly.
+            answer_text = (
+                ", ".join(selected_labels)
+                if selected_labels
+                else "Ninguno de estos síntomas"
+            )
+
             ctk.CTkLabel(
                 card,
                 text=question["text"],
@@ -610,7 +908,7 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
             )
             ctk.CTkLabel(
                 card,
-                text=", ".join(selected_labels),
+                text=answer_text,
                 font=(Theme.FONT_FAMILY, 12),
                 text_color=Theme.TEXT_SECONDARY,
                 wraplength=620,
@@ -649,6 +947,72 @@ class PlantCareQuestionnaireWindow(ctk.CTk):
             corner_radius=Theme.BUTTON_RADIUS,
             height=45,
         ).pack(side="right")
+
+    def _run_ai_explanations(
+        self,
+        request_id: int,
+        assessment: HierarchicalResult,
+    ) -> None:
+        """Generate grounded explanations without touching Tkinter widgets."""
+        diagnosis = assessment.diagnosis
+        if diagnosis is None:
+            return
+
+        try:
+            explanations = generate_diagnostic_explanations(
+                diagnosis=diagnosis,
+                catalogue=self._problem_catalog,
+                client=OllamaClient(),
+                traces=assessment.traces,
+                symptom_labels=self._symptom_labels,
+            )
+        except Exception:
+            logging.exception("PlantCare AI could not generate explanations.")
+            explanations = {code: None for code in diagnosis.problem_codes}
+
+        self._ai_results.put((request_id, explanations))
+
+    def _poll_ai_results(self) -> None:
+        """Display completed AI explanations on the Tkinter thread."""
+
+        while True:
+            try:
+                request_id, explanations = (
+                    self._ai_results.get_nowait()
+                )
+            except Empty:
+                break
+
+            # Ignore results from previous questionnaire sessions.
+            if (
+                request_id != self._ai_request_id
+                or self._session.current_question is not None
+            ):
+                continue
+
+            for code, explanation in explanations.items():
+                label = self._ai_result_labels.get(code)
+
+                if label is None or not label.winfo_exists():
+                    continue
+
+                if explanation is None:
+                    label.configure(
+                        text=(
+                            "La explicación adicional de PlantCare AI "
+                            "no está disponible. Puedes consultar "
+                            "los cuidados indicados en la ficha."
+                        )
+                    )
+                else:
+                    label.configure(
+                        text=explanation.replace("**", "")
+                    )
+
+        # Poll again without blocking the Tkinter event loop.
+        self.after(150, self._poll_ai_results)
+
+
 
     def _restart_questionnaire(self) -> None:
         """Start a new questionnaire session."""
